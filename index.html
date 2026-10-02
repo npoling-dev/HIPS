@@ -20,8 +20,8 @@
       --stem-accent: #0284c7;
       --nonstem-accent: #500000;
       --cocurricular-accent: #334155;
-      --ulo-badge-bg: #e0f2fe;
-      --ulo-badge-text: #0369a1;
+      --ulo-badge-bg: #e2e8f0;
+      --ulo-badge-text: #1e293b;
     }
 
     * {
@@ -39,7 +39,7 @@
     }
 
     .container {
-      max-width: 1500px;
+      max-width: 1450px;
       margin: 0 auto;
     }
 
@@ -54,7 +54,7 @@
     }
 
     header h1 {
-      font-size: 1.9rem;
+      font-size: 1.85rem;
       font-weight: 700;
       letter-spacing: -0.02em;
       margin-bottom: 6px;
@@ -102,8 +102,8 @@
     .nav-tab {
       background: transparent;
       border: none;
-      padding: 12px 24px;
-      font-size: 0.92rem;
+      padding: 10px 20px;
+      font-size: 0.9rem;
       font-weight: 600;
       color: var(--tamu-steel);
       cursor: pointer;
@@ -140,9 +140,9 @@
 
     .matrix-grid {
       display: grid;
-      grid-template-columns: 290px repeat(3, 1fr);
+      grid-template-columns: 280px repeat(3, 1fr);
       gap: 16px;
-      min-width: 1150px;
+      min-width: 1100px;
     }
 
     .grid-header {
@@ -163,14 +163,12 @@
       grid-column: span 4;
       background: var(--tamu-dark-maroon);
       color: #ffffff;
-      padding: 14px 20px;
+      padding: 12px 20px;
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       border-radius: 6px;
-      margin-top: 20px;
+      margin-top: 16px;
       letter-spacing: 0.04em;
-      text-transform: uppercase;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     .element-title-cell {
@@ -197,7 +195,7 @@
       line-height: 1.5;
     }
 
-    /* Light Gray Shading for Matrix Cells */
+    /* Requirement 2: Light Gray Shading for Matrix Cells */
     .matrix-cell {
       background: var(--tamu-cell-bg);
       padding: 20px;
@@ -283,7 +281,7 @@
     .modal-content {
       background: var(--tamu-card-bg);
       width: 100%;
-      max-width: 950px;
+      max-width: 900px;
       max-height: 90vh;
       border-radius: 8px;
       overflow-y: auto;
@@ -347,7 +345,6 @@
       border-bottom: 2px solid var(--tamu-border-light);
       padding-bottom: 8px;
       margin-bottom: 12px;
-      flex-wrap: wrap;
     }
 
     .ex-tab-btn {
@@ -385,10 +382,23 @@
       padding-bottom: 12px;
     }
 
-    .discipline-label {
-      font-size: 0.92rem;
+    .track-tag {
+      font-size: 0.75rem;
       font-weight: 700;
-      color: var(--tamu-maroon);
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    .track-tag.stem { background: var(--stem-accent); color: #ffffff; }
+    .track-tag.nonstem { background: var(--nonstem-accent); color: #ffffff; }
+    .track-tag.cocurricular { background: var(--cocurricular-accent); color: #ffffff; }
+
+    .discipline-label {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--tamu-slate);
     }
 
     .data-group {
@@ -421,8 +431,8 @@
     .ulo-badge {
       font-size: 0.72rem;
       font-weight: 600;
-      background: var(--ulo-badge-bg);
-      color: var(--ulo-badge-text);
+      background: #e0f2fe;
+      color: #0369a1;
       padding: 4px 8px;
       border-radius: 4px;
       border: 1px solid #bae6fd;
@@ -514,14 +524,14 @@
     }
 
     .score-box {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: var(--tamu-maroon);
     }
 
     .ulo-summary-box {
       margin-top: 20px;
-      padding: 18px;
+      padding: 16px;
       background: #ffffff;
       border: 1px solid var(--tamu-border);
       border-radius: 6px;
@@ -576,7 +586,7 @@
       white-space: pre-wrap;
       line-height: 1.6;
       margin-top: 16px;
-      max-height: 520px;
+      max-height: 500px;
       overflow-y: auto;
     }
 
@@ -601,18 +611,18 @@
   <div class="container">
     <header>
       <h1>TAMU High-Impact Practices (HIPs) Course Profile Tool</h1>
-      <p>Center for Teaching Excellence | All 4 Quadrants, 8 AAC&U Quality Elements & TAMU ULO Mapping</p>
+      <p>Center for Teaching Excellence | Quality Fidelity Matrix, Disciplinary Exemplars & ULO Mapping</p>
     </header>
 
     <section class="rationale-section">
       <h2>Tool Purpose & Institutional Rationale</h2>
       <p>
-        The TAMU High-Impact Practices (HIPs) Course Profile Tool provides a comprehensive framework across all four core pedagogical quadrants to design, evaluate, and scale high-impact learning experiences. By systematically aligning course activities with AAC&U quality elements and Texas A&M's 7 Undergraduate Learning Outcomes (ULOs), this tool ensures rigorous curriculum design, institutional fidelity, and verifiable student success.
+        The TAMU High-Impact Practices (HIPs) Course Profile Tool provides a structured framework for faculty, program directors, and curriculum committees to design, evaluate, and scale high-impact learning experiences. By aligning course activities with AAC&U quality elements and Texas A&M Undergraduate Learning Outcomes (ULOs), this tool ensures pedagogical rigor, institutional fidelity, and verifiable student success across academic and co-curricular programs.
       </p>
     </section>
 
     <nav class="tool-nav">
-      <button class="nav-tab active" onclick="switchTab('matrixTab')">HIP Fidelity Matrix (4 Quadrants)</button>
+      <button class="nav-tab active" onclick="switchTab('matrixTab')">HIP Fidelity Matrix</button>
       <button class="nav-tab" onclick="switchTab('diagnosticTab')">Self-Assessment Diagnostic</button>
       <button class="nav-tab" onclick="switchTab('builderTab')">Syllabus Language Builder</button>
     </nav>
@@ -629,7 +639,7 @@
       <div class="diagnostic-panel">
         <div class="panel-header">
           <h2>Interactive Self-Assessment Diagnostic</h2>
-          <p>Select implementation levels for all 8 AAC&U quality elements across the 4 quadrants to compute your total course fidelity score and aggregated TAMU ULO coverage.</p>
+          <p>Select the current implementation level for each quality element to compute your course fidelity score and active TAMU ULO mappings.</p>
         </div>
         <div id="diagnosticItems"></div>
         <div class="diag-summary">
@@ -637,7 +647,7 @@
             <h3>Total Fidelity Score</h3>
             <p id="fidelityTierLabel" style="font-size: 0.88rem; color: var(--tamu-steel);">Select options above to compute status.</p>
           </div>
-          <div class="score-box" id="scoreDisplay">0 / 24</div>
+          <div class="score-box" id="scoreDisplay">0 / 18</div>
         </div>
         <div class="ulo-summary-box">
           <h4>Mapped TAMU Undergraduate Learning Outcomes (ULOs)</h4>
@@ -653,7 +663,7 @@
       <div class="builder-panel">
         <div class="panel-header">
           <h2>Syllabus Language Builder</h2>
-          <p>Generate comprehensive, copy-paste syllabus descriptions, learning outcomes, assessment frameworks, and explicit TAMU ULO mappings for any element.</p>
+          <p>Generate comprehensive, copy-paste syllabus descriptions, learning outcomes, assessment frameworks, and explicit TAMU ULO mappings.</p>
         </div>
         <div class="form-row">
           <div class="form-group">
@@ -708,6 +718,7 @@
   </div>
 
   <script>
+    // TAMU Undergraduate Learning Outcomes Master Dictionary
     const TAMU_ULOS = {
       ulo_depth: "1. Master Depth of Knowledge",
       ulo_critical: "2. Demonstrate Critical Thinking",
@@ -718,32 +729,87 @@
       ulo_collab: "7. Work Collaboratively"
     };
 
+    // Full Matrix Dataset (3 Examples per Track per Cell)
     const matrixData = [
       {
         quadrant: "QUADRANT A: ENGAGEMENT & MENTORSHIP",
         elements: [
           {
             id: "interactions",
-            title: "1. Faculty & Peer Interactions",
+            title: "Faculty & Peer Interactions",
             rationale: "Mentorship density directly correlates with student retention, sense of belonging, and post-graduation mobility.",
             tiers: {
               foundational: {
                 desc: "Faculty-led modeling with structured peer-review protocols focused on establishing clear foundational criteria.",
                 exemplars: {
                   stem: [
-                    { discipline: "Biology (Introductory Genetics)", outcome: "Apply standardized peer-review protocols to evaluate classmate laboratory calculation workflows and hypothesis structures.", activity: "Peer-Led Team Learning (PLTL) weekly workshops where students cross-verify lab procedures and error calculations using structured peer review sheets.", assessment: "Peer Verification Checklist evaluated for diagnostic accuracy and feedback depth.", ulos: ["ulo_depth", "ulo_collab", "ulo_critical"] },
-                    { discipline: "Chemistry (Organic Lab)", outcome: "Critique peer synthetic reaction mechanism diagrams using instructor-modeled assessment criteria.", activity: "Structured bench-side peer audits of reaction notebook steps prior to lab execution.", assessment: "Annotated Synthetic Mechanism Protocol and Instructor Verification Signoff.", ulos: ["ulo_depth", "ulo_critical"] },
-                    { discipline: "Computer Science (Programming Fundamentals)", outcome: "Identify structural syntax errors and logical edge cases in peer code submissions.", activity: "Paired code review sprints adhering to industry-standard peer debugging checklists.", assessment: "Code Review Log detailing identified bugs and proposed optimizations.", ulos: ["ulo_critical", "ulo_collab"] }
+                    {
+                      discipline: "Biology (Introductory Genetics)",
+                      outcome: "Apply standardized peer-review protocols to evaluate classmate laboratory calculation workflows and hypothesis structures.",
+                      activity: "Peer-Led Team Learning (PLTL) weekly workshops where students cross-verify lab procedures and error calculations using structured peer review sheets.",
+                      assessment: "Peer Verification Checklist evaluated for diagnostic accuracy and feedback depth.",
+                      ulos: ["ulo_depth", "ulo_collab", "ulo_critical"]
+                    },
+                    {
+                      discipline: "Chemistry (Organic Chemistry Lab)",
+                      outcome: "Critique peer synthetic reaction mechanism diagrams using instructor-modeled assessment criteria.",
+                      activity: "Structured bench-side peer audits of reaction notebook steps prior to lab execution.",
+                      assessment: "Annotated Synthetic Mechanism Protocol and Instructor Verification Signoff.",
+                      ulos: ["ulo_depth", "ulo_critical"]
+                    },
+                    {
+                      discipline: "Computer Science (Programming Fundamentals)",
+                      outcome: "Identify structural syntax errors and logical edge cases in peer code submissions.",
+                      activity: "Paired code review sprints adhering to industry-standard peer debugging checklists.",
+                      assessment: "Code Review Log detailing identified bugs and proposed optimizations.",
+                      ulos: ["ulo_critical", "ulo_collab"]
+                    }
                   ],
                   nonstem: [
-                    { discipline: "History (US History Survey)", outcome: "Analyze peer thesis statements using instructor-modeled rubrics for primary source evidentiary support.", activity: "Structured peer review workshop evaluating essay introductions against formal historiographical rubrics.", assessment: "Annotated Peer Draft Review Rubric with actionable revision notes.", ulos: ["ulo_critical", "ulo_comm"] },
-                    { discipline: "Business (Intro to Marketing)", outcome: "Evaluate peer target market profile briefs using standardized consumer behavior criteria.", activity: "Small-group market segmentation peer critique using instructor-provided analytical grids.", assessment: "Peer Feedback Grid with revised customer persona submission.", ulos: ["ulo_depth", "ulo_collab"] },
-                    { discipline: "English (Composition & Rhetoric)", outcome: "Construct constructive critique regarding peer rhetorical strategies and paragraph cohesion.", activity: "Triad writing workshop conducting line-by-line peer reviews on persuasive drafts.", assessment: "Peer Critique Sheet and Draft 2 Revision Matrix.", ulos: ["ulo_comm", "ulo_critical"] }
+                    {
+                      discipline: "History (US History Survey)",
+                      outcome: "Analyze peer thesis statements using instructor-modeled rubrics for primary source evidentiary support.",
+                      activity: "Structured peer review workshop evaluating essay introductions against formal historiographical rubrics.",
+                      assessment: "Annotated Peer Draft Review Rubric with actionable revision notes.",
+                      ulos: ["ulo_critical", "ulo_comm"]
+                    },
+                    {
+                      discipline: "Business (Intro to Marketing)",
+                      outcome: "Evaluate peer target market profile briefs using standardized consumer behavior criteria.",
+                      activity: "Small-group market segmentation peer critique using instructor-provided analytical grids.",
+                      assessment: "Peer Feedback Grid with revised customer persona submission.",
+                      ulos: ["ulo_depth", "ulo_collab"]
+                    },
+                    {
+                      discipline: "English (Composition & Rhetoric)",
+                      outcome: "Construct constructive critique regarding peer rhetorical strategies and paragraph cohesion.",
+                      activity: "Triad writing workshop conducting line-by-line peer reviews on persuasive drafts.",
+                      assessment: "Peer Critique Sheet and Draft 2 Revision Matrix.",
+                      ulos: ["ulo_comm", "ulo_critical"]
+                    }
                   ],
                   cocurricular: [
-                    { discipline: "Student Leadership (Emerging Leaders)", outcome: "Execute structured team peer-evaluations following established organizational communication norms.", activity: "Team charter orientation drafting ground rules and practicing introductory peer feedback scenarios.", assessment: "Completed Peer Feedback Worksheet and signed Team Operating Agreement.", ulos: ["ulo_collab", "ulo_resp"] },
-                    { discipline: "Campus Engagement (Peer Mentorship)", outcome: "Demonstrate active listening techniques during peer-to-peer mentoring onboarding sessions.", activity: "Role-play mentoring scenarios with faculty advisors evaluating communication dynamics.", assessment: "Active Listening Self-Assessment & Advisor Evaluation Rubric.", ulos: ["ulo_comm", "ulo_collab"] },
-                    { discipline: "Residential Life (Hall Councils)", outcome: "Formulate group consensus protocols for hall event budgeting discussions.", activity: "Guided committee breakout sessions practicing collaborative resource distribution.", assessment: "Committee Decision Log & Peer Collaboration Rating.", ulos: ["ulo_collab", "ulo_resp"] }
+                    {
+                      discipline: "Student Leadership (Emerging Leaders)",
+                      outcome: "Execute structured team peer-evaluations following established organizational communication norms.",
+                      activity: "Team charter orientation drafting ground rules and practicing introductory peer feedback scenarios.",
+                      assessment: "Completed Peer Feedback Worksheet and signed Team Operating Agreement.",
+                      ulos: ["ulo_collab", "ulo_resp"]
+                    },
+                    {
+                      discipline: "Campus Engagement (Peer Mentorship)",
+                      outcome: "Demonstrate active listening techniques during peer-to-peer mentoring onboarding sessions.",
+                      activity: "Role-play mentoring scenarios with faculty advisors evaluating communication dynamics.",
+                      assessment: "Active Listening Self-Assessment & Advisor Evaluation Rubric.",
+                      ulos: ["ulo_comm", "ulo_collab"]
+                    },
+                    {
+                      discipline: "Residential Life (Hall Councils)",
+                      outcome: "Formulate group consensus protocols for hall event budgeting discussions.",
+                      activity: "Guided committee breakout sessions practicing collaborative resource distribution.",
+                      assessment: "Committee Decision Log & Peer Collaboration Rating.",
+                      ulos: ["ulo_collab", "ulo_resp"]
+                    }
                   ]
                 }
               },
@@ -751,19 +817,73 @@
                 desc: "Iterative collaboration where peers provide formative critique and faculty operates as an expert consultant.",
                 exemplars: {
                   stem: [
-                    { discipline: "Civil Engineering (Hydrology)", outcome: "Refine stormwater drainage prototypes through formative critique sessions with faculty acting as engineering consultants.", activity: "Weekly studio pin-up sessions presenting hydraulic modeling data to faculty and peer design teams.", assessment: "Design Iteration Log documenting how peer and instructor critique altered engineering drafts.", ulos: ["ulo_depth", "ulo_critical", "ulo_collab"] },
-                    { discipline: "Biochemistry (Metabolic Pathways)", outcome: "Co-design metabolic assay experiments incorporating formative feedback from peer research groups.", activity: "Bi-weekly research team seminars presenting pilot assay data and refining experimental parameters.", assessment: "Revised Experimental Design Proposal with Peer Comment Tracking Matrix.", ulos: ["ulo_depth", "ulo_critical"] },
-                    { discipline: "Agricultural Systems Management", outcome: "Optimize irrigation system models through iterative client-consultant feedback loops.", activity: "Field simulations presenting preliminary equipment layouts to faculty and agricultural specialists.", assessment: "System Optimization Report with Client Feedback Integration Notes.", ulos: ["ulo_depth", "ulo_comm"] }
+                    {
+                      discipline: "Civil Engineering (Hydrology)",
+                      outcome: "Refine stormwater drainage prototypes through formative critique sessions with faculty acting as engineering consultants.",
+                      activity: "Weekly studio pin-up sessions presenting hydraulic modeling data to faculty and peer design teams.",
+                      assessment: "Design Iteration Log documenting how peer and instructor critique altered engineering drafts.",
+                      ulos: ["ulo_depth", "ulo_critical", "ulo_collab"]
+                    },
+                    {
+                      discipline: "Biochemistry (Metabolic Pathways)",
+                      outcome: "Co-design metabolic assay experiments incorporating formative feedback from peer research groups.",
+                      activity: "Bi-weekly research team seminars presenting pilot assay data and refining experimental parameters.",
+                      assessment: "Revised Experimental Design Proposal with Peer Comment Tracking Matrix.",
+                      ulos: ["ulo_depth", "ulo_critical"]
+                    },
+                    {
+                      discipline: "Agricultural Systems Management",
+                      outcome: "Optimize irrigation system models through iterative client-consultant feedback loops.",
+                      activity: "Field simulations presenting preliminary equipment layouts to faculty and agricultural specialists.",
+                      assessment: "System Optimization Report with Client Feedback Integration Notes.",
+                      ulos: ["ulo_depth", "ulo_comm"]
+                    }
                   ],
                   nonstem: [
-                    { discipline: "Sociology (Research Methods)", outcome: "Co-design community survey instruments through iterative peer feedback and instructor consultations.", activity: "Collaborative workshop revising survey items based on pilot test feedback from campus focus groups.", assessment: "Survey Methodology Proposal accompanied by a Peer Revision Matrix.", ulos: ["ulo_critical", "ulo_global", "ulo_comm"] },
-                    { discipline: "Management (Organizational Behavior)", outcome: "Analyze organizational conflict cases and co-develop resolution strategies with peer teams.", activity: "Simulated executive board negotiation exercises moderated by faculty advisors.", assessment: "Negotiation Outcome Brief & Team Dynamics Evaluation.", ulos: ["ulo_collab", "ulo_resp", "ulo_comm"] },
-                    { discipline: "Communication (Public Relations)", outcome: "Draft and iterate crisis communication campaigns based on peer press corps feedback.", activity: "Mock press conferences where peers act as journalists questioning the campaign team.", assessment: "Media Briefing Portfolio & Revised Campaign Strategy Document.", ulos: ["ulo_comm", "ulo_critical"] }
+                    {
+                      discipline: "Sociology (Research Methods)",
+                      outcome: "Co-design community survey instruments through iterative peer feedback and instructor consultations.",
+                      activity: "Collaborative workshop revising survey items based on pilot test feedback from campus focus groups.",
+                      assessment: "Survey Methodology Proposal accompanied by a Peer Revision Matrix.",
+                      ulos: ["ulo_critical", "ulo_global", "ulo_comm"]
+                    },
+                    {
+                      discipline: "Management (Organizational Behavior)",
+                      outcome: "Analyze organizational conflict cases and co-develop resolution strategies with peer teams.",
+                      activity: "Simulated executive board negotiation exercises moderated by faculty advisors.",
+                      assessment: "Negotiation Outcome Brief & Team Dynamics Evaluation.",
+                      ulos: ["ulo_collab", "ulo_resp", "ulo_comm"]
+                    },
+                    {
+                      discipline: "Communication (Public Relations)",
+                      outcome: "Draft and iterate crisis communication campaigns based on peer press corps feedback.",
+                      activity: "Mock press conferences where peers act as journalists questioning the campaign team.",
+                      assessment: "Media Briefing Portfolio & Revised Campaign Strategy Document.",
+                      ulos: ["ulo_comm", "ulo_critical"]
+                    }
                   ],
                   cocurricular: [
-                    { discipline: "Student Engagement (Program Board)", outcome: "Execute multi-stage campus event planning with advisors acting as strategic quality consultants.", activity: "Bi-weekly sprint review meetings where student managers present event metrics to advisors.", assessment: "Mid-Project Progress Memo with peer 360-degree performance evaluation summaries.", ulos: ["ulo_collab", "ulo_resp", "ulo_lifelong"] },
-                    { discipline: "Multicultural Services (Diversity Ambassadors)", outcome: "Facilitate inter-group dialogue sessions co-designed with professional staff mentors.", activity: "Co-leading campus diversity workshops with peer co-facilitators and mentor observation.", assessment: "Dialogue Facilitation Log & Peer Debrief Summary.", ulos: ["ulo_global", "ulo_comm", "ulo_collab"] },
-                    { discipline: "Career Center (Peer Career Coaches)", outcome: "Deliver structured resume and interview coaching to peers under staff supervision.", activity: "Weekly peer coaching drop-in hours with post-session supervisor debriefs.", assessment: "Coaching Log & Mentorship Competency Evaluation.", ulos: ["ulo_comm", "ulo_lifelong"] }
+                    {
+                      discipline: "Student Engagement (Program Board)",
+                      outcome: "Execute multi-stage campus event planning with advisors acting as strategic quality consultants.",
+                      activity: "Bi-weekly sprint review meetings where student managers present event metrics to advisors.",
+                      assessment: "Mid-Project Progress Memo with peer 360-degree performance evaluation summaries.",
+                      ulos: ["ulo_collab", "ulo_resp", "ulo_lifelong"]
+                    },
+                    {
+                      discipline: "Multicultural Services (Diversity Ambassadors)",
+                      outcome: "Facilitate inter-group dialogue sessions co-designed with professional staff mentors.",
+                      activity: "Co-leading campus diversity workshops with peer co-facilitators and mentor observation.",
+                      assessment: "Dialogue Facilitation Log & Peer Debrief Summary.",
+                      ulos: ["ulo_global", "ulo_comm", "ulo_collab"]
+                    },
+                    {
+                      discipline: "Career Center (Peer Career Coaches)",
+                      outcome: "Deliver structured resume and interview coaching to peers under staff supervision.",
+                      activity: "Weekly peer coaching drop-in hours with post-session supervisor debriefs.",
+                      assessment: "Coaching Log & Mentorship Competency Evaluation.",
+                      ulos: ["ulo_comm", "ulo_lifelong"]
+                    }
                   ]
                 }
               },
@@ -771,19 +891,73 @@
                 desc: "Sustained professional partnership where students, faculty, and external partners co-author or co-design products.",
                 exemplars: {
                   stem: [
-                    { discipline: "Biomedical Engineering (Capstone)", outcome: "Co-author original biomedical engineering design specifications in direct partnership with clinical sponsors.", activity: "Year-long collaborative laboratory research sprints co-investigating novel medical device deployment.", assessment: "Co-Authored Technical Design Manuscript & External Sponsor Defense Signoff.", ulos: ["ulo_depth", "ulo_critical", "ulo_comm", "ulo_collab"] },
-                    { discipline: "Physics (Quantum Computing Capstone)", outcome: "Synthesize quantum algorithm simulation results alongside research laboratory principal investigators.", activity: "Joint publication writing sprints with faculty and national lab scientists.", assessment: "Peer-Reviewed Article Submission Draft and Defense Presentation.", ulos: ["ulo_depth", "ulo_critical", "ulo_comm"] },
-                    { discipline: "Data Science (Industry Practicum)", outcome: "Construct predictive data pipelines for external corporate clients in consultation with industry mentors.", activity: "Embedded analytics team sprints delivering weekly enterprise updates.", assessment: "Enterprise Pipeline Deployment & Client Technical Acceptance Report.", ulos: ["ulo_depth", "ulo_critical", "ulo_collab"] }
+                    {
+                      discipline: "Biomedical Engineering (Senior Capstone)",
+                      outcome: "Co-author original biomedical engineering design specifications in direct partnership with clinical sponsors.",
+                      activity: "Year-long collaborative laboratory research sprints co-investigating novel medical device deployment.",
+                      assessment: "Co-Authored Technical Design Manuscript & External Sponsor Defense Signoff.",
+                      ulos: ["ulo_depth", "ulo_critical", "ulo_comm", "ulo_collab"]
+                    },
+                    {
+                      discipline: "Physics (Quantum Computing Capstone)",
+                      outcome: "Synthesize quantum algorithm simulation results alongside research laboratory principal investigators.",
+                      activity: "Joint publication writing sprints with faculty and national lab scientists.",
+                      assessment: "Peer-Reviewed Article Submission Draft and Defense Presentation.",
+                      ulos: ["ulo_depth", "ulo_critical", "ulo_comm"]
+                    },
+                    {
+                      discipline: "Data Science (Industry Practicum)",
+                      outcome: "Construct predictive data pipelines for external corporate clients in consultation with industry mentors.",
+                      activity: "Embedded analytics team sprints delivering weekly enterprise updates.",
+                      assessment: "Enterprise Pipeline Deployment & Client Technical Acceptance Report.",
+                      ulos: ["ulo_depth", "ulo_critical", "ulo_collab"]
+                    }
                   ],
                   nonstem: [
-                    { discipline: "Public History (Curatorial Practicum)", outcome: "Co-curate a public museum exhibit in direct partnership with municipal archive directors.", activity: "On-site archival curation, exhibit text drafting, and layout design with professional museum curators.", assessment: "Public Museum Exhibit Deliverable & Partner Co-Design Evaluation.", ulos: ["ulo_depth", "ulo_comm", "ulo_global", "ulo_collab"] },
-                    { discipline: "Executive MBA / Consulting", outcome: "Deliver strategic growth plans for non-profit boards in direct collaboration with executive leadership.", activity: "Semester-long consulting engagement embedding in client board meetings.", assessment: "Executive Strategic Roadmap & Client Board Evaluation Rating.", ulos: ["ulo_depth", "ulo_critical", "ulo_resp", "ulo_comm"] },
-                    { discipline: "Fine Arts (Community Arts Commission)", outcome: "Execute public mural installation commissioned by municipal arts councils.", activity: "Community stakeholder design charrettes and collaborative physical installation.", assessment: "Completed Public Art Deliverable & Stakeholder Impact Report.", ulos: ["ulo_comm", "ulo_global", "ulo_resp"] }
+                    {
+                      discipline: "Public History (Curatorial Practicum)",
+                      outcome: "Co-curate a public museum exhibit in direct partnership with municipal archive directors.",
+                      activity: "On-site archival curation, exhibit text drafting, and layout design with professional museum curators.",
+                      assessment: "Public Museum Exhibit Deliverable & Partner Co-Design Evaluation.",
+                      ulos: ["ulo_depth", "ulo_comm", "ulo_global", "ulo_collab"]
+                    },
+                    {
+                      discipline: "Executive MBA / Management Consulting",
+                      outcome: "Deliver strategic growth plans for non-profit boards in direct collaboration with executive leadership.",
+                      activity: "Semester-long consulting engagement embedding in client board meetings.",
+                      assessment: "Executive Strategic Roadmap & Client Board Evaluation Rating.",
+                      ulos: ["ulo_depth", "ulo_critical", "ulo_resp", "ulo_comm"]
+                    },
+                    {
+                      discipline: "Fine Arts (Community Arts Commission)",
+                      outcome: "Execute public mural installation commissioned by municipal arts councils.",
+                      activity: "Community stakeholder design charrettes and collaborative physical installation.",
+                      assessment: "Completed Public Art Deliverable & Stakeholder Impact Report.",
+                      ulos: ["ulo_comm", "ulo_global", "ulo_resp"]
+                    }
                   ],
                   cocurricular: [
-                    { discipline: "Student Governance (SGA Cabinet)", outcome: "Co-create long-term institutional policy recommendations alongside university administrators.", activity: "Joint task force participation drafting campus-wide wellness and safety policies.", assessment: "Signed Institutional Policy Proposal & Executive Advisory Board Signoff.", ulos: ["ulo_resp", "ulo_comm", "ulo_global", "ulo_collab"] },
-                    { discipline: "Sustainability Center (Eco-Reps)", outcome: "Formulate campus sustainability initiatives aligned with municipal waste-reduction goals.", activity: "Direct partnership with university physical plant officers to pilot campus composting.", assessment: "Campus Infrastructure Pilot Audit & Municipal Partner Report.", ulos: ["ulo_resp", "ulo_global", "ulo_lifelong"] },
-                    { discipline: "Non-Profit Leadership (VISTA Fellows)", outcome: "Manage community partner outreach grants delivering verifiable local impact metrics.", activity: "Leading community development campaigns alongside regional foundation officers.", assessment: "Grant Execution Audit & Community Partner Impact Evaluation.", ulos: ["ulo_resp", "ulo_global", "ulo_comm"] }
+                    {
+                      discipline: "Student Governance (SGA Executive Cabinet)",
+                      outcome: "Co-create long-term institutional policy recommendations alongside university administrators.",
+                      activity: "Joint task force participation drafting campus-wide wellness and safety policies.",
+                      assessment: "Signed Institutional Policy Proposal & Executive Advisory Board Signoff.",
+                      ulos: ["ulo_resp", "ulo_comm", "ulo_global", "ulo_collab"]
+                    },
+                    {
+                      discipline: "Sustainability Center (Eco-Reps)",
+                      outcome: "Formulate campus sustainability initiatives aligned with municipal waste-reduction goals.",
+                      activity: "Direct partnership with university physical plant officers to pilot campus composting.",
+                      assessment: "Campus Infrastructure Pilot Audit & Municipal Partner Report.",
+                      ulos: ["ulo_resp", "ulo_global", "ulo_lifelong"]
+                    },
+                    {
+                      discipline: "Non-Profit Leadership (VISTA Fellows)",
+                      outcome: "Manage community partner outreach grants delivering verifiable local impact metrics.",
+                      activity: "Leading community development campaigns alongside regional foundation officers.",
+                      assessment: "Grant Execution Audit & Community Partner Impact Evaluation.",
+                      ulos: ["ulo_resp", "ulo_global", "ulo_comm"]
+                    }
                   ]
                 }
               }
@@ -791,26 +965,80 @@
           },
           {
             id: "feedback",
-            title: "2. Iterative Feedback & Revision",
+            title: "Iterative Feedback & Revision",
             rationale: "Continuous formative assessment catches learning gaps early, significantly reducing drop rates and strengthening mastery.",
             tiers: {
               foundational: {
                 desc: "Formative feedback focused on technical accuracy, procedural alignment, and baseline skill acquisition.",
                 exemplars: {
                   stem: [
-                    { discipline: "Mathematics (Calculus II)", outcome: "Correct mathematical proof logic by incorporating instructor notes on preliminary homework drafts.", activity: "Two-stage submission workflow where Draft 1 receives targeted feedback on proof rigor before final grading.", assessment: "Revised Proof Portfolio demonstrating clear diagnostic error correction.", ulos: ["ulo_depth", "ulo_critical"] },
-                    { discipline: "Physics (Mechanics Lab)", outcome: "Refine physical uncertainty calculations following early lab submission instructor critiques.", activity: "In-lab error audit sessions re-checking sensor calibration data.", assessment: "Corrected Laboratory Calculation Log.", ulos: ["ulo_depth", "ulo_critical"] },
-                    { discipline: "Geosciences (Mineralogy)", outcome: "Revise mineral identification classifications based on TA micro-assay feedback.", activity: "Petrographic microscope lab revisions incorporating instructor guidance.", assessment: "Revised Mineral Identification Logbook.", ulos: ["ulo_depth"] }
+                    {
+                      discipline: "Mathematics (Calculus II)",
+                      outcome: "Correct mathematical proof logic by incorporating instructor notes on preliminary homework drafts.",
+                      activity: "Two-stage submission workflow where Draft 1 receives targeted feedback on proof rigor before final grading.",
+                      assessment: "Revised Proof Portfolio demonstrating clear diagnostic error correction.",
+                      ulos: ["ulo_depth", "ulo_critical"]
+                    },
+                    {
+                      discipline: "Physics (Mechanics Lab)",
+                      outcome: "Refine physical uncertainty calculations following early lab submission instructor critiques.",
+                      activity: "In-lab error audit sessions re-checking sensor calibration data.",
+                      assessment: "Corrected Laboratory Calculation Log.",
+                      ulos: ["ulo_depth", "ulo_critical"]
+                    },
+                    {
+                      discipline: "Geosciences (Mineralogy)",
+                      outcome: "Revise mineral identification classifications based on TA micro-assay feedback.",
+                      activity: "Petrographic microscope lab revisions incorporating instructor guidance.",
+                      assessment: "Revised Mineral Identification Logbook.",
+                      ulos: ["ulo_depth"]
+                    }
                   ],
                   nonstem: [
-                    { discipline: "English (Technical Writing)", outcome: "Refine document formatting and structural clarity based on low-stakes instructor editorial feedback.", activity: "Writing draft audit modules focusing on technical conciseness and passive voice reduction.", assessment: "Draft Evolution Portfolio showing original draft, comment log, and final document.", ulos: ["ulo_comm", "ulo_critical"] },
-                    { discipline: "Accounting (Financial Accounting)", outcome: "Correct trial balance statement entries through automated feedback logic modules.", activity: "Iterative ledger reconciliation drills with step-by-step diagnostic feedback.", assessment: "Reconciled Financial Statement Submission.", ulos: ["ulo_depth"] },
-                    { discipline: "Philosophy (Logic & Reasoning)", outcome: "Eliminate informal logical fallacies from argument outlines using instructor commentary.", activity: "Two-stage argument outline submission with structural feedback.", assessment: "Revised Logical Argument Schema.", ulos: ["ulo_critical"] }
+                    {
+                      discipline: "English (Technical Writing)",
+                      outcome: "Refine document formatting and structural clarity based on low-stakes instructor editorial feedback.",
+                      activity: "Writing draft audit modules focusing on technical conciseness and passive voice reduction.",
+                      assessment: "Draft Evolution Portfolio showing original draft, comment log, and final document.",
+                      ulos: ["ulo_comm", "ulo_critical"]
+                    },
+                    {
+                      discipline: "Accounting (Financial Accounting)",
+                      outcome: "Correct trial balance statement entries through automated feedback logic modules.",
+                      activity: "Iterative ledger reconciliation drills with step-by-step diagnostic feedback.",
+                      assessment: "Reconciled Financial Statement Submission.",
+                      ulos: ["ulo_depth"]
+                    },
+                    {
+                      discipline: "Philosophy (Logic & Reasoning)",
+                      outcome: "Eliminate informal logical fallacies from argument outlines using instructor commentary.",
+                      activity: "Two-stage argument outline submission with structural feedback.",
+                      assessment: "Revised Logical Argument Schema.",
+                      ulos: ["ulo_critical"]
+                    }
                   ],
                   cocurricular: [
-                    { discipline: "Organizational Leadership", outcome: "Identify operational plan errors against standardized student organization management guidelines.", activity: "Auditing committee budgets or event checklists using structured advisor feedback templates.", assessment: "Corrected Operational Plan with Revision Tracking Notes.", ulos: ["ulo_resp", "ulo_lifelong"] },
-                    { discipline: "Student Media (Campus Newspaper)", outcome: "Apply copy-editing feedback to align news articles with AP Stylebook standards.", activity: "First-draft editor desk reviews with line-item style commentary.", assessment: "Published Article with Marked Draft Comparison.", ulos: ["ulo_comm", "ulo_critical"] },
-                    { discipline: "Rec Sports (Club Sports Officers)", outcome: "Adjust facility risk management forms following campus safety officer review.", activity: "Safety protocol review sessions submitting preliminary risk mitigation plans.", assessment: "Approved Safety Compliance Documentation.", ulos: ["ulo_resp"] }
+                    {
+                      discipline: "Organizational Leadership",
+                      outcome: "Identify operational plan errors against standardized student organization management guidelines.",
+                      activity: "Auditing committee budgets or event checklists using structured advisor feedback templates.",
+                      assessment: "Corrected Operational Plan with Revision Tracking Notes.",
+                      ulos: ["ulo_resp", "ulo_lifelong"]
+                    },
+                    {
+                      discipline: "Student Media (Campus Newspaper)",
+                      outcome: "Apply copy-editing feedback to align news articles with AP Stylebook standards.",
+                      activity: "First-draft editor desk reviews with line-item style commentary.",
+                      assessment: "Published Article with Marked Draft Comparison.",
+                      ulos: ["ulo_comm", "ulo_critical"]
+                    },
+                    {
+                      discipline: "Rec Sports (Club Sports Officers)",
+                      outcome: "Adjust facility risk management forms following campus safety officer review.",
+                      activity: "Safety protocol review sessions submitting preliminary risk mitigation plans.",
+                      assessment: "Approved Safety Compliance Documentation.",
+                      ulos: ["ulo_resp"]
+                    }
                   ]
                 }
               },
@@ -818,19 +1046,73 @@
                 desc: "Feedback emphasizes applying theory to authentic scenarios and demonstrating analytical revision quality.",
                 exemplars: {
                   stem: [
-                    { discipline: "Computer Science (Software Eng)", outcome: "Modify backend API code structures based on code review feedback from campus IT teams.", activity: "Agile development sprints where campus IT engineers conduct pull-request reviews on student code.", assessment: "Sprint Release Notes & GitHub Pull-Request Comment Integration Log.", ulos: ["ulo_depth", "ulo_critical", "ulo_collab"] },
-                    { discipline: "Environmental Science (Ecology)", outcome: "Adjust ecological sampling models in response to field supervisor data validation feedback.", activity: "Mid-semester field method reviews adjusting transect parameters based on preliminary yields.", assessment: "Revised Field Research Protocol & Data Quality Report.", ulos: ["ulo_depth", "ulo_critical"] },
-                    { discipline: "Electrical Engineering (Circuits)", outcome: "Redesign PCB board layouts to resolve thermal dissipation issues flagged in design reviews.", activity: "Thermal simulation reviews with faculty feedback driving schematic revisions.", assessment: "Revised Schematic & Thermal Audit Comparison Memo.", ulos: ["ulo_depth", "ulo_critical"] }
+                    {
+                      discipline: "Computer Science (Software Engineering)",
+                      outcome: "Modify backend API code structures based on code review feedback from campus IT infrastructure teams.",
+                      activity: "Agile development sprints where campus IT engineers conduct pull-request reviews on student code.",
+                      assessment: "Sprint Release Notes & GitHub Pull-Request Comment Integration Log.",
+                      ulos: ["ulo_depth", "ulo_critical", "ulo_collab"]
+                    },
+                    {
+                      discipline: "Environmental Studies (Ecology)",
+                      outcome: "Adjust ecological sampling models in response to field supervisor data validation feedback.",
+                      activity: "Mid-semester field method reviews adjusting transect parameters based on preliminary yields.",
+                      assessment: "Revised Field Research Protocol & Data Quality Report.",
+                      ulos: ["ulo_depth", "ulo_critical"]
+                    },
+                    {
+                      discipline: "Electrical Engineering (Circuit Design)",
+                      outcome: "Redesign PCB board layouts to resolve thermal dissipation issues flagged in design reviews.",
+                      activity: "Thermal simulation reviews with faculty feedback driving schematic revisions.",
+                      assessment: "Revised Schematic & Thermal Audit Comparison Memo.",
+                      ulos: ["ulo_depth", "ulo_critical"]
+                    }
                   ],
                   nonstem: [
-                    { discipline: "Political Science (Policy Analysis)", outcome: "Adapt policy recommendation briefs based on feedback gathered during mock legislative hearings.", activity: "Roundtable presentation of preliminary briefs to policy staff, receiving live critique on feasibility.", assessment: "Revised Policy Brief featuring a dedicated Stakeholder Response Section.", ulos: ["ulo_critical", "ulo_comm", "ulo_global"] },
-                    { discipline: "Marketing (Brand Strategy)", outcome: "Modify multi-channel ad campaigns following focus group feedback from target demographics.", activity: "Presenting rough creative concepts to campus focus groups and iterating visual assets.", assessment: "Campaign Revision Portfolio & Focus Group Response Matrix.", ulos: ["ulo_comm", "ulo_critical"] },
-                    { discipline: "Economics (Econometrics)", outcome: "Refine regression equations to control for confounding variables identified by peer discussants.", activity: "Workshop working papers presenting econometric specifications and taking audience critiques.", assessment: "Revised Working Paper & Response to Referees Document.", ulos: ["ulo_depth", "ulo_critical"] }
+                    {
+                      discipline: "Political Science (Policy Analysis)",
+                      outcome: "Adapt policy recommendation briefs based on feedback gathered during mock legislative hearings.",
+                      activity: "Roundtable presentation of preliminary briefs to policy staff, receiving live critique on feasibility.",
+                      assessment: "Revised Policy Brief featuring a dedicated Stakeholder Response Section.",
+                      ulos: ["ulo_critical", "ulo_comm", "ulo_global"]
+                    },
+                    {
+                      discipline: "Marketing (Brand Strategy)",
+                      outcome: "Modify multi-channel ad campaigns following focus group feedback from target demographics.",
+                      activity: "Presenting rough creative concepts to campus focus groups and iterating visual assets.",
+                      assessment: "Campaign Revision Portfolio & Focus Group Response Matrix.",
+                      ulos: ["ulo_comm", "ulo_critical"]
+                    },
+                    {
+                      discipline: "Economics (Econometrics)",
+                      outcome: "Refine regression equations to control for confounding variables identified by peer discussants.",
+                      activity: "Workshop working papers presenting econometric specifications and taking audience critiques.",
+                      assessment: "Revised Working Paper & Response to Referees Document.",
+                      ulos: ["ulo_depth", "ulo_critical"]
+                    }
                   ],
                   cocurricular: [
-                    { discipline: "Campus Event Management", outcome: "Optimize event operations models in response to advisor critique on safety and budget constraints.", activity: "Mid-semester design review adjusting event logistics based on real-world space constraints.", assessment: "Event Optimization Report featuring an Advisor Critique Log.", ulos: ["ulo_resp", "ulo_collab", "ulo_lifelong"] },
-                    { discipline: "Fraternity & Sorority Life", outcome: "Revise risk management education plans based on university compliance feedback.", activity: "Iterative policy drafting sessions with campus fraternity/sorority advisors.", assessment: "Final Approved Chapter Risk Prevention Plan.", ulos: ["ulo_resp", "ulo_global"] },
-                    { discipline: "Wellness Services (Peer Educators)", outcome: "Adapt health outreach materials following professional health staff editorial reviews.", activity: "Drafting public health campaign materials and refining language based on clinical feedback.", assessment: "Approved Educational Campaign Suite.", ulos: ["ulo_comm", "ulo_lifelong"] }
+                    {
+                      discipline: "Campus Event Management",
+                      outcome: "Optimize event operations models in response to advisor critique on safety and budget constraints.",
+                      activity: "Mid-semester design review adjusting event logistics based on real-world space constraints.",
+                      assessment: "Event Optimization Report featuring an Advisor Critique Log.",
+                      ulos: ["ulo_resp", "ulo_collab", "ulo_lifelong"]
+                    },
+                    {
+                      discipline: "Fraternity & Sorority Life (Greek Councils)",
+                      outcome: "Revise risk management education plans based on university compliance feedback.",
+                      activity: "Iterative policy drafting sessions with campus fraternity/sorority advisors.",
+                      assessment: "Final Approved Chapter Risk Prevention Plan.",
+                      ulos: ["ulo_resp", "ulo_global"]
+                    },
+                    {
+                      discipline: "Wellness Services (Peer Health Educators)",
+                      outcome: "Adapt health outreach materials following professional health staff editorial reviews.",
+                      activity: "Drafting public health campaign materials and refining language based on clinical feedback.",
+                      assessment: "Approved Educational Campaign Suite.",
+                      ulos: ["ulo_comm", "ulo_lifelong"]
+                    }
                   ]
                 }
               },
@@ -838,19 +1120,73 @@
                 desc: "Feedback evaluates long-term impact, professional ethics, and public standard alignment.",
                 exemplars: {
                   stem: [
-                    { discipline: "Data Science (Medical AI Capstone)", outcome: "Refine diagnostic AI algorithms to resolve bias issues identified by hospital ethics boards.", activity: "Formal ethics board reviews presenting algorithmic fairness metrics and updating models.", assessment: "Ethics Board Compliance Audit & Final Algorithmic Specification.", ulos: ["ulo_depth", "ulo_critical", "ulo_resp", "ulo_global"] },
-                    { discipline: "Aerospace Engineering (Design)", outcome: "Iterate flight control software to meet FAA regulatory safety standards.", activity: "Reviews with industry flight test engineers evaluating fail-safe redundancy protocols.", assessment: "FAA Compliance Briefing Document & Flight Test Validation Log.", ulos: ["ulo_depth", "ulo_critical", "ulo_resp"] },
-                    { discipline: "Biotechnology (Regulatory Affairs)", outcome: "Update clinical trial submission protocols based on mock FDA regulatory board feedback.", activity: "Defending trial designs before regulatory compliance officers.", assessment: "Final Approved Investigational Device Exemption (IDE) Brief.", ulos: ["ulo_depth", "ulo_resp", "ulo_comm"] }
+                    {
+                      discipline: "Data Science (Medical AI Capstone)",
+                      outcome: "Refine diagnostic AI algorithms to resolve bias issues identified by hospital ethics boards.",
+                      activity: "Formal ethics board reviews presenting algorithmic fairness metrics and updating models.",
+                      assessment: "Ethics Board Compliance Audit & Final Algorithmic Specification.",
+                      ulos: ["ulo_depth", "ulo_critical", "ulo_resp", "ulo_global"]
+                    },
+                    {
+                      discipline: "Aerospace Engineering (Design Capstone)",
+                      outcome: "Iterate flight control software to meet FAA regulatory safety standards.",
+                      activity: "Reviews with industry flight test engineers evaluating fail-safe redundancy protocols.",
+                      assessment: "FAA Compliance Briefing Document & Flight Test Validation Log.",
+                      ulos: ["ulo_depth", "ulo_critical", "ulo_resp"]
+                    },
+                    {
+                      discipline: "Biotechnology (Regulatory Affairs)",
+                      outcome: "Update clinical trial submission protocols based on mock FDA regulatory board feedback.",
+                      activity: "Defending trial designs before regulatory compliance officers.",
+                      assessment: "Final Approved Investigational Device Exemption (IDE) Brief.",
+                      ulos: ["ulo_depth", "ulo_resp", "ulo_comm"]
+                    }
                   ],
                   nonstem: [
-                    { discipline: "Journalism (Investigative)", outcome: "Refine investigative journalism articles to meet professional legal and ethical standards.", activity: "Editorial reviews with legal counsel interrogating source documentation and defamation risk.", assessment: "Published Investigative Report & Source Verification Portfolio.", ulos: ["ulo_comm", "ulo_critical", "ulo_resp"] },
-                    { discipline: "Public Administration (City Planning)", outcome: "Revise municipal zoning proposals based on testimony from public town hall meetings.", activity: "Presenting urban renewal plans at city hall hearings and integrating public testimony.", assessment: "Final Municipal Zoning Directive & Community Input Matrix.", ulos: ["ulo_global", "ulo_resp", "ulo_comm", "ulo_collab"] },
-                    { discipline: "Finance (Portfolio Management)", outcome: "Adjust asset allocation strategies based on investment committee performance critiques.", activity: "Quarterly portfolio reviews presenting investment performance to university endowment managers.", assessment: "Quarterly Investment Performance Report & Portfolio Revision Summary.", ulos: ["ulo_depth", "ulo_critical", "ulo_resp"] }
+                    {
+                      discipline: "Journalism (Investigative Reporting)",
+                      outcome: "Refine investigative journalism articles to meet professional legal and ethical standards.",
+                      activity: "Editorial reviews with legal counsel interrogating source documentation and defamation risk.",
+                      assessment: "Published Investigative Report & Source Verification Portfolio.",
+                      ulos: ["ulo_comm", "ulo_critical", "ulo_resp"]
+                    },
+                    {
+                      discipline: "Public Administration (City Planning)",
+                      outcome: "Revise municipal zoning proposals based on testimony from public town hall meetings.",
+                      activity: "Presenting urban renewal plans at city hall hearings and integrating public testimony.",
+                      assessment: "Final Municipal Zoning Directive & Community Input Matrix.",
+                      ulos: ["ulo_global", "ulo_resp", "ulo_comm", "ulo_collab"]
+                    },
+                    {
+                      discipline: "Finance (Portfolio Management Practicum)",
+                      outcome: "Adjust asset allocation strategies based on investment committee performance critiques.",
+                      activity: "Quarterly portfolio reviews presenting investment performance to university endowment managers.",
+                      assessment: "Quarterly Investment Performance Report & Portfolio Revision Summary.",
+                      ulos: ["ulo_depth", "ulo_critical", "ulo_resp"]
+                    }
                   ],
                   cocurricular: [
-                    { discipline: "Executive Leadership (SGA President)", outcome: "Refine executive administrative proposals based on feedback from university regents.", activity: "Formal presentation of student initiatives to university board committees.", assessment: "Final Approved Administrative Policy Directive.", ulos: ["ulo_resp", "ulo_comm", "ulo_global", "ulo_collab"] },
-                    { discipline: "Community Service (Alternative Breaks)", outcome: "Co-design community aid deployment plans based on structural needs assessments from NGO leaders.", activity: "Pre-deployment planning workshops with regional humanitarian directors.", assessment: "Community Aid Deployment Blueprint & Partner Evaluation.", ulos: ["ulo_resp", "ulo_global", "ulo_lifelong"] },
-                    { discipline: "Student Legal Services", outcome: "Revise tenant advocacy guidebooks based on feedback from practicing municipal attorneys.", activity: "Legal review sessions ensuring public advisory documents comply with current state statutes.", assessment: "Published Tenant Rights Advisory Handbook.", ulos: ["ulo_resp", "ulo_comm", "ulo_depth"] }
+                    {
+                      discipline: "Executive Leadership (Student Body President)",
+                      outcome: "Refine executive administrative proposals based on feedback from university regents.",
+                      activity: "Formal presentation of student initiatives to university board committees.",
+                      assessment: "Final Approved Administrative Policy Directive.",
+                      ulos: ["ulo_resp", "ulo_comm", "ulo_global", "ulo_collab"]
+                    },
+                    {
+                      discipline: "Community Service (Alternative Breaks)",
+                      outcome: "Co-design community aid deployment plans based on structural needs assessments from NGO leaders.",
+                      activity: "Pre-deployment planning workshops with regional humanitarian directors.",
+                      assessment: "Community Aid Deployment Blueprint & Partner Evaluation.",
+                      ulos: ["ulo_resp", "ulo_global", "ulo_lifelong"]
+                    },
+                    {
+                      discipline: "Student Legal Services (Legal Interns)",
+                      outcome: "Revise tenant advocacy guidebooks based on feedback from practicing municipal attorneys.",
+                      activity: "Legal review sessions ensuring public advisory documents comply with current state statutes.",
+                      assessment: "Published Tenant Rights Advisory Handbook.",
+                      ulos: ["ulo_resp", "ulo_comm", "ulo_depth"]
+                    }
                   ]
                 }
               }
@@ -863,26 +1199,80 @@
         elements: [
           {
             id: "time_effort",
-            title: "3. Time & Effort Investment",
+            title: "Time & Effort Investment",
             rationale: "Sustained time-on-task ensures deep cognitive processing and establishes durable professional work habits.",
             tiers: {
               foundational: {
                 desc: "Consistent structured engagement over a term (<20 hours); focus on establishing fundamental routines.",
                 exemplars: {
                   stem: [
-                    { discipline: "General Chemistry I", outcome: "Maintain a consistent weekly laboratory notebook meeting standardized scientific logging routines.", activity: "Weekly pre-lab prep work and post-lab observations totaling 15 hours across the semester.", assessment: "Weekly Lab Notebook Inspection evaluated on accuracy, timeliness, and consistency.", ulos: ["ulo_depth", "ulo_lifelong"] },
-                    { discipline: "Introductory Biology", outcome: "Execute structured specimen identification drills over an 8-week period.", activity: "Weekly 2-hour microscopy lab routines tracking cellular structures.", assessment: "Microscopy Observation Logbook & Practical Assessment.", ulos: ["ulo_depth"] },
-                    { discipline: "Engineering Graphics (CAD)", outcome: "Develop drafting efficiency by completing bi-weekly parametric modeling assignments.", activity: "Bi-weekly CAD modeling assignments requiring 18 total hours of software practice.", assessment: "CAD Model Accuracy Portfolio.", ulos: ["ulo_depth", "ulo_lifelong"] }
+                    {
+                      discipline: "General Chemistry I",
+                      outcome: "Maintain a consistent weekly laboratory notebook meeting standardized scientific logging routines.",
+                      activity: "Weekly pre-lab prep work and post-lab observations totaling 15 hours across the semester.",
+                      assessment: "Weekly Lab Notebook Inspection evaluated on accuracy, timeliness, and consistency.",
+                      ulos: ["ulo_depth", "ulo_lifelong"]
+                    },
+                    {
+                      discipline: "Introductory Biology",
+                      outcome: "Execute structured specimen identification drills over an 8-week period.",
+                      activity: "Weekly 2-hour microscopy lab routines tracking cellular structures.",
+                      assessment: "Microscopy Observation Logbook & Practical Assessment.",
+                      ulos: ["ulo_depth"]
+                    },
+                    {
+                      discipline: "Engineering Graphics (CAD)",
+                      outcome: "Develop drafting efficiency by completing bi-weekly parametric modeling assignments.",
+                      activity: "Bi-weekly CAD modeling assignments requiring 18 total hours of software practice.",
+                      assessment: "CAD Model Accuracy Portfolio.",
+                      ulos: ["ulo_depth", "ulo_lifelong"]
+                    }
                   ],
                   nonstem: [
-                    { discipline: "Communication (Public Speaking)", outcome: "Sustain regular speech prep, practice, and critique schedules across multiple presentations.", activity: "Out-of-class speech rehearsing and video self-critique totaling 15 project hours.", assessment: "Speech Rehearsal Log & Video Reflection Portfolio.", ulos: ["ulo_comm", "ulo_lifelong"] },
-                    { discipline: "Foreign Languages (Spanish I)", outcome: "Build conversational fluency through daily language lab modules.", activity: "15-minute daily digital language practice modules accumulating 18 hours across the term.", assessment: "Language Practice Tracking Log & Oral Proficiency Test.", ulos: ["ulo_global", "ulo_comm"] },
-                    { discipline: "Music Theory I", outcome: "Master sight-singing techniques through daily ear-training practice.", activity: "Weekly structured ear-training lab modules.", assessment: "Sight-Singing Progress Journal & Practical Exam.", ulos: ["ulo_depth", "ulo_lifelong"] }
+                    {
+                      discipline: "Communication (Public Speaking)",
+                      outcome: "Sustain regular speech prep, practice, and critique schedules across multiple presentations.",
+                      activity: "Out-of-class speech rehearsing and video self-critique totaling 15 project hours.",
+                      assessment: "Speech Rehearsal Log & Video Reflection Portfolio.",
+                      ulos: ["ulo_comm", "ulo_lifelong"]
+                    },
+                    {
+                      discipline: "Foreign Languages (Spanish I)",
+                      outcome: "Build conversational fluency through daily language lab modules.",
+                      activity: "15-minute daily digital language practice modules accumulating 18 hours across the term.",
+                      assessment: "Language Practice Tracking Log & Oral Proficiency Test.",
+                      ulos: ["ulo_global", "ulo_comm"]
+                    },
+                    {
+                      discipline: "Music Theory I",
+                      outcome: "Master sight-singing techniques through daily ear-training practice.",
+                      activity: "Weekly structured ear-training lab modules.",
+                      assessment: "Sight-Singing Progress Journal & Practical Exam.",
+                      ulos: ["ulo_depth", "ulo_lifelong"]
+                    }
                   ],
                   cocurricular: [
-                    { discipline: "Intro to Student Leadership", outcome: "Demonstrate personal time-management habits using professional digital task boards.", activity: "Weekly project tracking updates logged in digital project management tools over 10 weeks.", assessment: "Weekly Task Completion Verification Log.", ulos: ["ulo_lifelong", "ulo_resp"] },
-                    { discipline: "Student Wellness (Fitness Instructors)", outcome: "Complete required safety and instructional certification training modules.", activity: "15 hours of baseline group fitness instruction training and practical modeling.", assessment: "Fitness Instruction Certification Signoff.", ulos: ["ulo_lifelong"] },
-                    { discipline: "Campus Ambassadors (Tour Guides)", outcome: "Memorize institutional history and route safety protocols.", activity: "18 hours of campus route walks and institutional history study sessions.", assessment: "Tour Route Practical Exam & Script Verification.", ulos: ["ulo_comm", "ulo_depth"] }
+                    {
+                      discipline: "Intro to Student Leadership",
+                      outcome: "Demonstrate personal time-management habits using professional digital task boards.",
+                      activity: "Weekly project tracking updates logged in digital project management tools over 10 weeks.",
+                      assessment: "Weekly Task Completion Verification Log.",
+                      ulos: ["ulo_lifelong", "ulo_resp"]
+                    },
+                    {
+                      discipline: "Student Wellness (Peer Fitness Instructors)",
+                      outcome: "Complete required safety and instructional certification training modules.",
+                      activity: "15 hours of baseline group fitness instruction training and practical modeling.",
+                      assessment: "Fitness Instruction Certification Signoff.",
+                      ulos: ["ulo_lifelong"]
+                    },
+                    {
+                      discipline: "Campus Ambassadors (Tour Guides)",
+                      outcome: "Memorize institutional history and route safety protocols.",
+                      activity: "18 hours of campus route walks and institutional history study sessions.",
+                      assessment: "Tour Route Practical Exam & Script Verification.",
+                      ulos: ["ulo_comm", "ulo_depth"]
+                    }
                   ]
                 }
               },
@@ -890,19 +1280,73 @@
                 desc: "Sustained intensity; substantial out-of-class effort (40–80 hours) dedicated to project milestone completion.",
                 exemplars: {
                   stem: [
-                    { discipline: "Environmental Science (Field Ecology)", outcome: "Execute an extended multi-week field sampling protocol requiring 50+ hours of lab and field work.", activity: "Bi-weekly field sampling trips, lab processing, and longitudinal data tracking across local watersheds.", assessment: "Mid-Term Field Data Summary & Final Watershed Analysis Report.", ulos: ["ulo_depth", "ulo_critical", "ulo_collab"] },
-                    { discipline: "Mechanical Engineering (Thermodynamics)", outcome: "Construct a thermal system prototype involving 60 hours of design, fabrication, and testing.", activity: "Subsystem prototyping and machine shop fabrication over a 6-week module.", assessment: "Thermal Performance Test Data & Final System Deliverable.", ulos: ["ulo_depth", "ulo_critical"] },
-                    { discipline: "Agronomy (Crop Physiology)", outcome: "Manage greenhouse crop trials accumulating 50 hours of monitoring and physiological measurement.", activity: "Daily plant growth tracking, soil moisture logging, and biomass calculation over 10 weeks.", assessment: "Crop Growth Dynamics Report.", ulos: ["ulo_depth", "ulo_critical"] }
+                    {
+                      discipline: "Environmental Science (Field Ecology)",
+                      outcome: "Execute an extended multi-week field sampling protocol requiring 50+ hours of lab and field work.",
+                      activity: "Bi-weekly field sampling trips, lab processing, and longitudinal data tracking across local watersheds.",
+                      assessment: "Mid-Term Field Data Summary & Final Watershed Analysis Report.",
+                      ulos: ["ulo_depth", "ulo_critical", "ulo_collab"]
+                    },
+                    {
+                      discipline: "Mechanical Engineering (Thermodynamics Project)",
+                      outcome: "Construct a thermal system prototype involving 60 hours of design, fabrication, and testing.",
+                      activity: "Subsystem prototyping and machine shop fabrication over a 6-week module.",
+                      assessment: "Thermal Performance Test Data & Final System Deliverable.",
+                      ulos: ["ulo_depth", "ulo_critical"]
+                    },
+                    {
+                      discipline: "Agronomy (Crop Physiology)",
+                      outcome: "Manage greenhouse crop trials accumulating 50 hours of monitoring and physiological measurement.",
+                      activity: "Daily plant growth tracking, soil moisture logging, and biomass calculation over 10 weeks.",
+                      assessment: "Crop Growth Dynamics Report.",
+                      ulos: ["ulo_depth", "ulo_critical"]
+                    }
                   ],
                   nonstem: [
-                    { discipline: "Sociology (Fieldwork Methods)", outcome: "Conduct extensive observational fieldwork accumulating 60+ hours of qualitative data collection.", activity: "Fieldwork observation hours, transcript coding, and qualitative data entry over 8 weeks.", assessment: "Fieldwork Transcript Archive & Qualitative Research Synthesis.", ulos: ["ulo_critical", "ulo_global", "ulo_comm"] },
-                    { discipline: "Marketing Research", outcome: "Execute a comprehensive market survey collecting 500+ consumer responses.", activity: "Survey distribution, mall-intercept interviews, and statistical coding accumulating 55 hours.", assessment: "Consumer Analytics Report & Survey Database.", ulos: ["ulo_critical", "ulo_depth"] },
-                    { discipline: "Theatre (Stage Management)", outcome: "Manage technical rehearsals and stage cues for a departmental mainstage production.", activity: "70 hours of evening rehearsal management, call sheet tracking, and crew coordination.", assessment: "Stage Manager Prompt Book & Production Execution Evaluation.", ulos: ["ulo_comm", "ulo_collab", "ulo_resp"] }
+                    {
+                      discipline: "Sociology (Fieldwork Methods)",
+                      outcome: "Conduct extensive observational fieldwork accumulating 60+ hours of qualitative data collection.",
+                      activity: "Fieldwork observation hours, transcript coding, and qualitative data entry over 8 weeks.",
+                      assessment: "Fieldwork Transcript Archive & Qualitative Research Synthesis.",
+                      ulos: ["ulo_critical", "ulo_global", "ulo_comm"]
+                    },
+                    {
+                      discipline: "Marketing Research",
+                      outcome: "Execute a comprehensive market survey collecting 500+ consumer responses.",
+                      activity: "Survey distribution, mall-intercept interviews, and statistical coding accumulating 55 hours.",
+                      assessment: "Consumer Analytics Report & Survey Database.",
+                      ulos: ["ulo_critical", "ulo_depth"]
+                    },
+                    {
+                      discipline: "Theatre (Stage Management Practicum)",
+                      outcome: "Manage technical rehearsals and stage cues for a departmental mainstage production.",
+                      activity: "70 hours of evening rehearsal management, call sheet tracking, and crew coordination.",
+                      assessment: "Stage Manager Prompt Book & Production Execution Evaluation.",
+                      ulos: ["ulo_comm", "ulo_collab", "ulo_resp"]
+                    }
                   ],
                   cocurricular: [
-                    { discipline: "Student Program Coordination", outcome: "Coordinate semester-long campus program schedules requiring 60+ total project management hours.", activity: "Managing vendor logistics, marketing schedules, and live event setup teams across the term.", assessment: "Program Operational Audit and Execution Metric Portfolio.", ulos: ["ulo_collab", "ulo_resp", "ulo_lifelong"] },
-                    { discipline: "Student Media (Managing Editors)", outcome: "Oversee weekly layout and editorial production schedules accumulating 75 hours.", activity: "Weekly print production night management and team assignment tracking.", assessment: "Semester News Archive & Managing Editor Evaluation.", ulos: ["ulo_comm", "ulo_collab", "ulo_critical"] },
-                    { discipline: "Panhellenic / IFC Officers", outcome: "Coordinate campus-wide recruitment operations totaling 80 project hours.", activity: "Managing logistics, registration databases, and team volunteers during recruitment week.", assessment: "Recruitment Logistics Audit & Executive Summary.", ulos: ["ulo_collab", "ulo_resp", "ulo_global"] }
+                    {
+                      discipline: "Student Program Coordination",
+                      outcome: "Coordinate semester-long campus program schedules requiring 60+ total project management hours.",
+                      activity: "Managing vendor logistics, marketing schedules, and live event setup teams across the term.",
+                      assessment: "Program Operational Audit and Execution Metric Portfolio.",
+                      ulos: ["ulo_collab", "ulo_resp", "ulo_lifelong"]
+                    },
+                    {
+                      discipline: "Student Media (Managing Editors)",
+                      outcome: "Oversee weekly layout and editorial production schedules accumulating 75 hours.",
+                      activity: "Weekly print production night management and team assignment tracking.",
+                      assessment: "Semester News Archive & Managing Editor Evaluation.",
+                      ulos: ["ulo_comm", "ulo_collab", "ulo_critical"]
+                    },
+                    {
+                      discipline: "Panhellenic / IFC Officers",
+                      outcome: "Coordinate campus-wide recruitment operations totaling 80 project hours.",
+                      activity: "Managing logistics, registration databases, and team volunteers during recruitment week.",
+                      assessment: "Recruitment Logistics Audit & Executive Summary.",
+                      ulos: ["ulo_collab", "ulo_resp", "ulo_global"]
+                    }
                   ]
                 }
               },
@@ -910,364 +1354,73 @@
                 desc: "Deep, immersive professional investment (100+ hours); managing complex project timelines and client demands.",
                 exemplars: {
                   stem: [
-                    { discipline: "Engineering Senior Capstone", outcome: "Dedicate 120+ hours toward building and testing an industry-sponsored engineering prototype.", activity: "Multi-phase engineering workflow involving CAD modeling, physical prototyping, and stress testing.", assessment: "Comprehensive Engineering Capstone Report & Industry Sponsor Acceptance Signoff.", ulos: ["ulo_depth", "ulo_critical", "ulo_comm", "ulo_collab"] },
-                    { discipline: "Biotechnology Research Thesis", outcome: "Conduct 150+ hours of independent wet-lab bench research investigating gene expression.", activity: "Year-long laboratory experimentation, assay optimization, and data modeling.", assessment: "Undergraduate Research Thesis & Defense Seminar.", ulos: ["ulo_depth", "ulo_critical", "ulo_lifelong"] },
-                    { discipline: "Computer Science (Open Source)", outcome: "Contribute 110 hours of peer-reviewed code to a major open-source software repository.", activity: "Navigating project issue boards, drafting feature pull requests, and resolving code reviews.", assessment: "Accepted Pull Request Portfolio & Open Source Commits Log.", ulos: ["ulo_depth", "ulo_critical", "ulo_collab", "ulo_global"] }
+                    {
+                      discipline: "Engineering Senior Capstone",
+                      outcome: "Dedicate 120+ hours toward building and testing an industry-sponsored engineering prototype.",
+                      activity: "Multi-phase engineering workflow involving CAD modeling, physical prototyping, and stress testing.",
+                      assessment: "Comprehensive Engineering Capstone Report & Industry Sponsor Acceptance Signoff.",
+                      ulos: ["ulo_depth", "ulo_critical", "ulo_comm", "ulo_collab"]
+                    },
+                    {
+                      discipline: "Biotechnology Research Thesis",
+                      outcome: "Conduct 150+ hours of independent wet-lab bench research investigating gene expression.",
+                      activity: "Year-long laboratory experimentation, assay optimization, and data modeling.",
+                      assessment: "Undergraduate Research Thesis & Defense Seminar.",
+                      ulos: ["ulo_depth", "ulo_critical", "ulo_lifelong"]
+                    },
+                    {
+                      discipline: "Computer Science (Open Source Contribution)",
+                      outcome: "Contribute 110 hours of peer-reviewed code to a major open-source software repository.",
+                      activity: "Navigating project issue boards, drafting feature pull requests, and resolving code reviews.",
+                      assessment: "Accepted Pull Request Portfolio & Open Source Commits Log.",
+                      ulos: ["ulo_depth", "ulo_critical", "ulo_collab", "ulo_global"]
+                    }
                   ],
                   nonstem: [
-                    { discipline: "Management Consulting Practicum", outcome: "Sustain a 100+ hour professional engagement analyzing client supply chains or market data.", activity: "Full-semester consulting project conducting market surveys, data modeling, and client briefings.", assessment: "Client Strategy Deliverable & Comprehensive Industry Audit.", ulos: ["ulo_depth", "ulo_critical", "ulo_comm", "ulo_resp"] },
-                    { discipline: "Documentary Film Production", outcome: "Produce a 20-minute investigative documentary film requiring 130 hours of production.", activity: "Location shooting, interview transcription, video editing, and sound mixing over 15 weeks.", assessment: "Completed Documentary Film & Festival Screening Brief.", ulos: ["ulo_comm", "ulo_critical", "ulo_global", "ulo_lifelong"] },
-                    { discipline: "Policy Internship (Legislative)", outcome: "Serve 140 hours drafting policy memos for state legislative committees.", activity: "Tracking committee bills, summarizing constituent testimony, and drafting policy briefs.", assessment: "Legislative Internship Portfolio & Committee Director Evaluation.", ulos: ["ulo_resp", "ulo_comm", "ulo_critical", "ulo_global"] }
+                    {
+                      discipline: "Management Consulting Practicum",
+                      outcome: "Sustain a 100+ hour professional engagement analyzing client supply chains or market data.",
+                      activity: "Full-semester consulting project conducting market surveys, data modeling, and client briefings.",
+                      assessment: "Client Strategy Deliverable & Comprehensive Industry Audit.",
+                      ulos: ["ulo_depth", "ulo_critical", "ulo_comm", "ulo_resp"]
+                    },
+                    {
+                      discipline: "Documentary Film Production",
+                      outcome: "Produce a 20-minute investigative documentary film requiring 130 hours of production.",
+                      activity: "Location shooting, interview transcription, video editing, and sound mixing over 15 weeks.",
+                      assessment: "Completed Documentary Film & Festival Screening Brief.",
+                      ulos: ["ulo_comm", "ulo_critical", "ulo_global", "ulo_lifelong"]
+                    },
+                    {
+                      discipline: "Policy Internship (State Legislature)",
+                      outcome: "Serve 140 hours drafting policy memos for state legislative committees.",
+                      activity: "Tracking committee bills, summarizing constituent testimony, and drafting policy briefs.",
+                      assessment: "Legislative Internship Portfolio & Committee Director Evaluation.",
+                      ulos: ["ulo_resp", "ulo_comm", "ulo_critical", "ulo_global"]
+                    }
                   ],
                   cocurricular: [
-                    { discipline: "Student Body Executive Leadership", outcome: "Lead an institutional organization for 120+ hours overseeing operations and budget allocation.", activity: "Year-long executive governance managing budgets, committee structures, and campus initiatives.", assessment: "Annual Institutional Impact Report & Leadership Assessment Portfolio.", ulos: ["ulo_resp", "ulo_comm", "ulo_global", "ulo_collab"] },
-                    { discipline: "Traditions Council Chair", outcome: "Direct major university tradition event operations accumulating 130 hours of leadership.", activity: "Managing volunteer committees, university police liaison meetings, and crowd safety plans.", assessment: "Operational Execution Audit & Tradition Leadership Portfolio.", ulos: ["ulo_resp", "ulo_global", "ulo_collab"] },
-                    { discipline: "Emergency Corps (Student EMT Directors)", outcome: "Log 150 hours directing emergency medical response operations on campus.", activity: "Managing shift rosters, medical supply inventory, and live event emergency coverage.", assessment: "Emergency Response Operations Audit & Medical Director Signoff.", ulos: ["ulo_resp", "ulo_lifelong", "ulo_collab"] }
-                  ]
-                }
-              }
-            }
-          },
-          {
-            id: "high_expectations",
-            title: "4. High Performance Expectations",
-            rationale: "Setting challenging standards scaffolded by rubrics pushes students to perform at professional caliber levels.",
-            tiers: {
-              foundational: {
-                desc: "Clear explicit benchmarks and rubrics introduced early to establish academic and technical rigor.",
-                exemplars: {
-                  stem: [
-                    { discipline: "Physics (Modern Physics)", outcome: "Adhere to formal scientific manuscript formatting guidelines when reporting laboratory outcomes.", activity: "Drafting lab reports structured strictly in accordance with Physical Review Letters style guides.", assessment: "Formatted Manuscript Deliverable evaluated against strict publisher compliance rubrics.", ulos: ["ulo_depth", "ulo_comm"] },
-                    { discipline: "Engineering Statics", outcome: "Solve complex free-body diagram equations achieving 100% computational rigor on core steps.", activity: "Weekly problem sets with rigorous zero-tolerance policies for missing vector dimensions.", assessment: "Statics Calculation Portfolio with Master Error Audits.", ulos: ["ulo_depth", "ulo_critical"] },
-                    { discipline: "Biomedical Sciences (Histology)", outcome: "Identify tissue samples with 90%+ diagnostic accuracy on timed lab examinations.", activity: "Weekly timed micro-slide diagnostics practicing rapid clinical identification.", assessment: "Histological Diagnostic Examination Log.", ulos: ["ulo_depth"] }
-                  ],
-                  nonstem: [
-                    { discipline: "Art History (Renaissance Art)", outcome: "Formulate research papers meeting formal Chicago Manual of Style citation standards.", activity: "Archival citation drills and annotated bibliography drafting.", assessment: "Annotated Bibliography & Style Precision Audit.", ulos: ["ulo_depth", "ulo_comm"] },
-                    { discipline: "Economics (Microeconomic Theory)", outcome: "Derive mathematical optimization models using formal calculus proofs.", activity: "Mathematical economic modeling drills evaluated against strict formal proof rubrics.", assessment: "Proof Problem Set & Error Analysis Log.", ulos: ["ulo_depth", "ulo_critical"] },
-                    { discipline: "Philosophy (Ethics)", outcome: "Construct logical argument schemas avoiding all formal logical fallacies.", activity: "Rigorous logical reconstruction of ethical texts using formal symbolic notation.", assessment: "Symbolic Logic Defense Assignment.", ulos: ["ulo_critical", "ulo_comm"] }
-                  ],
-                  cocurricular: [
-                    { discipline: "Student Organization Finance", outcome: "Prepare annual budget proposals adhering to university SOFC accounting standards.", activity: "Audit preparation workshops reviewing campus financial compliance regulations.", assessment: "SOFC Budget Proposal & Financial Compliance Audit.", ulos: ["ulo_resp", "ulo_depth"] },
-                    { discipline: "ResLife Resident Advisors", outcome: "Execute incident reporting logs adhering strictly to Clery Act reporting standards.", activity: "Mock emergency scenario logging exercises with staff compliance reviews.", assessment: "Incident Documentation Accuracy Review.", ulos: ["ulo_resp", "ulo_comm"] },
-                    { discipline: "Campus Tour Guides", outcome: "Deliver 45-minute institutional briefings achieving 95%+ accuracy on university facts.", activity: "Live speech audits conducted by senior admissions officers.", assessment: "Admissions Certification Evaluation Signoff.", ulos: ["ulo_comm", "ulo_depth"] }
-                  ]
-                }
-              },
-              applied: {
-                desc: "Standards modeled after entry-level industry or academic research quality expectations.",
-                exemplars: {
-                  stem: [
-                    { discipline: "Chemical Engineering (Process Design)", outcome: "Design process flow diagrams meeting professional AIChE safety and efficiency standards.", activity: "Process simulation sprints using industry software (Aspen Plus) subject to peer audit.", assessment: "Process Design Package & Engineering Safety Compliance Review.", ulos: ["ulo_depth", "ulo_critical", "ulo_resp"] },
-                    { discipline: "Geology (Hydrogeology Field Methods)", outcome: "Produce hydrogeologic aquifer maps meeting USGS publication criteria.", activity: "Well-pumping test data collection and digital contour mapping under field conditions.", assessment: "USGS-Calibrated Hydrogeological Map & Technical Report.", ulos: ["ulo_depth", "ulo_critical"] },
-                    { discipline: "Computer Science (Cybersecurity)", outcome: "Execute penetration tests that identify vulnerabilities without crashing live systems.", activity: "Controlled sandbox cyber-range defense exercises following industry penetration frameworks.", assessment: "Vulnerability Assessment Audit & Remediation Plan.", ulos: ["ulo_depth", "ulo_critical", "ulo_resp"] }
-                  ],
-                  nonstem: [
-                    { discipline: "Finance (Corporate Valuation)", outcome: "Construct discounted cash flow (DCF) financial models matching Wall Street analyst standards.", activity: "Valuing real public firms using Bloomberg Terminals and presenting findings to finance faculty.", assessment: "Equity Research Report & Financial Model Valuation Sheet.", ulos: ["ulo_depth", "ulo_critical", "ulo_comm"] },
-                    { discipline: "Journalism (Feature Writing)", outcome: "Draft feature articles meeting publishable standards for regional news outlets.", activity: "On-location interviewing and multi-source investigative reporting under deadline pressure.", assessment: "Publishable Feature Article & Source Verification Dossier.", ulos: ["ulo_comm", "ulo_critical", "ulo_resp"] },
-                    { discipline: "Architecture (Studio III)", outcome: "Produce building design blueprints complying with local building code regulations.", activity: "Architectural jury reviews evaluating structural feasibility, code compliance, and aesthetics.", assessment: "Architectural Drawing Set & Jury Defense Evaluation.", ulos: ["ulo_depth", "ulo_critical", "ulo_comm"] }
-                  ],
-                  cocurricular: [
-                    { discipline: "Multicultural Student Services", outcome: "Design university-wide heritage month programs meeting professional event standards.", activity: "Managing $10,000+ budgets and vendor contracts for major speaker engagements.", assessment: "Event Quality Audit & Post-Program Financial Reconciliations.", ulos: ["ulo_global", "ulo_resp", "ulo_collab"] },
-                    { discipline: "Student Media (Editor-in-Chief)", outcome: "Maintain daily publication schedules adhering strictly to SPJ ethical codes.", activity: "Managing newsroom operations, handling press inquiries, and verifying legal disclosures.", assessment: "Newsroom Audit & Ethical Compliance Review.", ulos: ["ulo_resp", "ulo_comm", "ulo_critical"] },
-                    { discipline: "Student Advisory Councils", outcome: "Draft policy recommendations presented directly to college Deans.", activity: "Analyzing student climate survey data and formulating formal policy memos.", assessment: "Dean Policy Recommendation Brief & Executive Defense.", ulos: ["ulo_comm", "ulo_critical", "ulo_collab"] }
-                  ]
-                }
-              },
-              integrated: {
-                desc: "Professional-grade deliverables subjected to external peer or client review against industry benchmarks.",
-                exemplars: {
-                  stem: [
-                    { discipline: "Biomedical Engineering (Device Capstone)", outcome: "Develop medical device prototypes that pass ISO 13485 quality control audits.", activity: "Building, testing, and documenting device performance under external clinical oversight.", assessment: "ISO Quality Audit Portfolio & External Sponsor Signoff.", ulos: ["ulo_depth", "ulo_critical", "ulo_resp", "ulo_collab"] },
-                    { discipline: "Agronomy (Precision Agriculture)", outcome: "Deploy autonomous drone field surveys producing actionable crop yield prescription maps.", activity: "Managing commercial agricultural drone flights and generating GIS prescription files for farm managers.", assessment: "Commercial GIS Prescription Map & Client Audit Signoff.", ulos: ["ulo_depth", "ulo_critical", "ulo_lifelong"] },
-                    { discipline: "Computer Science (AI Research)", outcome: "Publish peer-reviewed machine learning papers in recognized conference proceedings.", activity: "Submitting original algorithmic research to top-tier computer science conferences.", assessment: "Peer-Reviewed Conference Paper & External Reviewer Scorecards.", ulos: ["ulo_depth", "ulo_critical", "ulo_comm"] }
-                  ],
-                  nonstem: [
-                    { discipline: "Law / Moot Court Competition", outcome: "Argue appellate oral briefs before sitting federal and state court judges.", activity: "Nationally competitive mock appellate arguments subject to strict judicial scoring.", assessment: "Appellate Brief Deliverable & Judicial Scoring Rubric.", ulos: ["ulo_comm", "ulo_critical", "ulo_depth", "ulo_resp"] },
-                    { discipline: "Public Relations (Agency Capstone)", outcome: "Execute full-scale PR campaigns for national clients achieving targeted media impressions.", activity: "Running live client accounts, managing media pitch cycles, and tracking ROI.", assessment: "Client ROI Campaign Report & Agency Board Evaluation.", ulos: ["ulo_comm", "ulo_critical", "ulo_collab", "ulo_resp"] },
-                    { discipline: "Music Performance (Senior Recital)", outcome: "Deliver a 60-minute solo musical recital evaluated by external guest adjudicators.", activity: "Rigorous solo performance preparation culminating in a formal public recital.", assessment: "Public Recital Performance & External Adjudicator Scoring.", ulos: ["ulo_depth", "ulo_comm", "ulo_lifelong"] }
-                  ],
-                  cocurricular: [
-                    { discipline: "SGA Student Body President", outcome: "Negotiate campus legislative priorities directly with university System Regents.", activity: "Formal testimony and executive briefings before university board members.", assessment: "System Board Legislative Briefing & Action Audit.", ulos: ["ulo_resp", "ulo_comm", "ulo_global", "ulo_collab"] },
-                    { discipline: "Student-Run Enterprise (Co-Op)", outcome: "Manage a profitable campus retail service generating audited revenue statements.", activity: "Full executive management of business operations, payroll, and supply chains.", assessment: "Audited Financial Statement & Board of Directors Review.", ulos: ["ulo_resp", "ulo_depth", "ulo_critical"] },
-                    { discipline: "Disaster Response (Student Corps)", outcome: "Deploy emergency management protocols alongside state emergency managers during disasters.", activity: "Coordinating real-time emergency shelter operations and resource routing.", assessment: "FEMA/State Emergency Response Audit Signoff.", ulos: ["ulo_resp", "ulo_global", "ulo_collab"] }
-                  ]
-                }
-              }
-            }
-          }
-        ]
-      },
-      {
-        quadrant: "QUADRANT C: RELEVANCE & APPLICATION",
-        elements: [
-          {
-            id: "real_world",
-            title: "5. Real-World Application & Context",
-            rationale: "Connecting academic concepts to authentic real-world contexts increases motivation and reinforces skill transferability.",
-            tiers: {
-              foundational: {
-                desc: "Case studies, authentic simulations, and field observations bridging classroom theory and practice.",
-                exemplars: {
-                  stem: [
-                    { discipline: "Introductory Geology", outcome: "Identify real-world geological fault lines using local topographic maps and field photos.", activity: "Analyzing active fault line case studies in Texas using GIS mapping tools.", assessment: "Geological Map Analysis Worksheet.", ulos: ["ulo_depth", "ulo_critical"] },
-                    { discipline: "Environmental Biology", outcome: "Evaluate local water quality data against municipal EPA safety standards.", activity: "Analyzing municipal water report datasets in laboratory exercises.", assessment: "Water Quality Compliance Memo.", ulos: ["ulo_depth", "ulo_resp"] },
-                    { discipline: "Industrial Engineering", outcome: "Map manufacturing workflow bottlenecks using real factory video simulations.", activity: "Time-and-motion video studies of assembly line operations.", assessment: "Workflow Efficiency Analysis Sheet.", ulos: ["ulo_depth", "ulo_critical"] }
-                  ],
-                  nonstem: [
-                    { discipline: "Business Law", outcome: "Analyze contract breach legal scenarios using contemporary corporate case studies.", activity: "Dissecting real corporate lawsuit filings and identifying contract clause violations.", assessment: "Legal Case Brief Submission.", ulos: ["ulo_depth", "ulo_critical"] },
-                    { discipline: "Political Science (Urban Policy)", outcome: "Evaluate local zoning ordinances against municipal demographic growth maps.", activity: "Reviewing City Council zoning meeting minutes and policy proposals.", assessment: "Zoning Impact Policy Analysis.", ulos: ["ulo_critical", "ulo_global"] },
-                    { discipline: "Psychology (Abnormal Psych)", outcome: "Differentiate clinical diagnostic criteria using anonymized patient case histories.", activity: "DSM-5 diagnostic case study exercises in small group discussions.", assessment: "Diagnostic Assessment Report.", ulos: ["ulo_depth", "ulo_critical"] }
-                  ],
-                  cocurricular: [
-                    { discipline: "Student Organization Management", outcome: "Apply university event permitting regulations to mock student campus events.", activity: "Navigating university room reservation and risk management portals.", assessment: "Mock Event Permit Application Suite.", ulos: ["ulo_resp", "ulo_lifelong"] },
-                    { discipline: "Peer Advising", outcome: "Navigate university degree audit systems to assist peers with course selection.", activity: "Practice sessions interpreting anonymized degree evaluation sheets.", assessment: "Degree Planning Scenario Audit.", ulos: ["ulo_depth", "ulo_comm"] },
-                    { discipline: "Campus Sustainability", outcome: "Conduct baseline campus energy usage audits using physical plant utility dashboards.", activity: "Tracking dorm building electricity usage data over a 2-week period.", assessment: "Dorm Energy Consumption Audit.", ulos: ["ulo_resp", "ulo_critical"] }
-                  ]
-                }
-              },
-              applied: {
-                desc: "Direct field practice, client consulting projects, and community-engaged problem solving.",
-                exemplars: {
-                  stem: [
-                    { discipline: "Civil Engineering (Transportation)", outcome: "Formulate traffic flow interventions for high-congestion campus intersections.", activity: "Collecting physical traffic count data at campus intersections and building simulation models.", assessment: "Intersection Traffic Mitigation Proposal.", ulos: ["ulo_depth", "ulo_critical", "ulo_comm"] },
-                    { discipline: "Agricultural Economics", outcome: "Construct commodity hedging models for local farm enterprises based on live futures data.", activity: "Working directly with local agricultural producers to simulate crop price hedging.", assessment: "Commodity Risk Management Plan.", ulos: ["ulo_depth", "ulo_critical"] },
-                    { discipline: "Veterinary Technology", outcome: "Execute clinical diagnostic protocols under direct supervision in teaching hospitals.", activity: "Rotational duties assisting veterinary clinicians in active animal care.", assessment: "Clinical Skill Competency Assessment Log.", ulos: ["ulo_depth", "ulo_resp"] }
-                  ],
-                  nonstem: [
-                    { discipline: "Marketing (Non-Profit Consulting)", outcome: "Develop fundraising campaigns for local community non-profit organizations.", activity: "Partnering with local charities to audit social media outreach and launch donor drives.", assessment: "Non-Profit Marketing Strategy Deliverable & Client Feedback.", ulos: ["ulo_comm", "ulo_critical", "ulo_resp", "ulo_collab"] },
-                    { discipline: "Educational Psychology", outcome: "Conduct classroom behavior observations in local public school partner districts.", activity: "Field observation hours tracking student engagement strategies in K-12 classrooms.", assessment: "Classroom Observation Journal & Learning Portfolio.", ulos: ["ulo_critical", "ulo_global", "ulo_comm"] },
-                    { discipline: "Public Administration", outcome: "Evaluate municipal public transit access gaps for low-income city neighborhoods.", activity: "Riding transit routes, surveying riders, and synthesizing GIS spatial data.", assessment: "Municipal Transit Accessibility Report.", ulos: ["ulo_global", "ulo_resp", "ulo_critical"] }
-                  ],
-                  cocurricular: [
-                    { discipline: "Community Service Center", outcome: "Coordinate local food bank distribution operations meeting community demand.", activity: "Managing inventory, volunteer shifts, and distribution logistics at local food pantries.", assessment: "Food Security Distribution Audit & Impact Log.", ulos: ["ulo_resp", "ulo_global", "ulo_collab"] },
-                    { discipline: "Student Government (Legislative)", outcome: "Draft student senate bills addressing actual campus parking or dining concerns.", activity: "Gathering student petition data and presenting legislative bills in student senate.", assessment: "Passed Student Senate Legislation & Policy Brief.", ulos: ["ulo_comm", "ulo_resp", "ulo_collab"] },
-                    { discipline: "Rec Sports (Fitness Management)", outcome: "Design and lead 8-week fitness programs for campus faculty and staff participants.", activity: "Conducting initial client fitness assessments and delivering customized workout plans.", assessment: "Client Fitness Progression Portfolio.", ulos: ["ulo_comm", "ulo_lifelong"] }
-                  ]
-                }
-              },
-              integrated: {
-                desc: "Full-immersion clinical rotations, co-ops, client capstones, and community-embedded internships.",
-                exemplars: {
-                  stem: [
-                    { discipline: "Electrical Engineering Co-Op", outcome: "Complete 14-week full-time industrial engineering co-op assignments at semiconductor fabrication plants.", activity: "Embedded full-time workplace duties optimizing semiconductor yield pipelines.", assessment: "Industrial Co-Op Employer Evaluation & Technical Synthesis Report.", ulos: ["ulo_depth", "ulo_critical", "ulo_comm", "ulo_lifelong"] },
-                    { discipline: "Wildlife Ecology Internship", outcome: "Manage wildlife habitat conservation programs in national state parks.", activity: "Full-season biological monitoring of endangered species alongside state game wardens.", assessment: "State Park Conservation Management Report.", ulos: ["ulo_depth", "ulo_resp", "ulo_global"] },
-                    { discipline: "Biomedical Clinical Rotations", outcome: "Deliver patient-centered medical imaging support in regional hospital trauma centers.", activity: "Full-time clinical rotations operating radiology equipment under hospital staff supervision.", assessment: "Clinical Rotation Supervisor Audit & Case Logbook.", ulos: ["ulo_depth", "ulo_resp", "ulo_comm"] }
-                  ],
-                  nonstem: [
-                    { discipline: "Accounting Internship (Big Four)", outcome: "Execute professional corporate audit procedures for enterprise clients during tax season.", activity: "Full-time corporate auditing, inventory count verification, and tax preparation.", assessment: "Enterprise Internship Performance Review & Audit Portfolio.", ulos: ["ulo_depth", "ulo_critical", "ulo_resp"] },
-                    { discipline: "Urban Planning Capstone", outcome: "Formulate master redevelopment plans for municipal downtown historic districts.", activity: "Contracted consulting with city councils leading public hearings and drafting zoning maps.", assessment: "Municipal Historic Redevelopment Plan & Council Acceptance Signoff.", ulos: ["ulo_global", "ulo_comm", "ulo_resp", "ulo_collab"] },
-                    { discipline: "Social Work Practicum", outcome: "Manage active casework loads for clients in regional family support agencies.", activity: "200+ hours of direct clinical client counseling under licensed social worker supervision.", assessment: "Agency Practicum Evaluation & Clinical Case Logs.", ulos: ["ulo_resp", "ulo_global", "ulo_comm"] }
-                  ],
-                  cocurricular: [
-                    { discipline: "Executive Internship (University System)", outcome: "Manage system-wide policy administrative initiatives directly under Vice Chancellors.", activity: "Full-time executive internship drafting policy memos and coordinating system events.", assessment: "Executive Director Evaluation & System Policy Report.", ulos: ["ulo_resp", "ulo_comm", "ulo_critical", "ulo_collab"] },
-                    { discipline: "Disaster Preparedness Corps", outcome: "Direct regional disaster relief logistics during active hurricane emergency deployments.", activity: "Managing state emergency logistics hubs and supply chain routing.", assessment: "Emergency Response Action Audit & Command Officer Evaluation.", ulos: ["ulo_resp", "ulo_global", "ulo_collab"] },
-                    { discipline: "Student Health Center Management", outcome: "Lead campus public health outbreak response campaigns alongside university epidemiologists.", activity: "Directing contact tracing teams and student vaccine clinic logistics.", assessment: "Outbreak Management Final Report & Health Director Signoff.", ulos: ["ulo_resp", "ulo_global", "ulo_lifelong"] }
-                  ]
-                }
-              }
-            }
-          },
-          {
-            id: "diversity_global",
-            title: "6. Diversity & Global Perspectives",
-            rationale: "Engaging diverse cultures, viewpoints, and global contexts develops cultural humility and complex problem-solving abilities.",
-            tiers: {
-              foundational: {
-                desc: "Comparative cultural analysis, global case studies, and structured intercultural dialogue frameworks.",
-                exemplars: {
-                  stem: [
-                    { discipline: "Global Public Health", outcome: "Compare infectious disease containment protocols between Western and global south healthcare systems.", activity: "Analyzing WHO global health datasets in comparative seminar discussions.", assessment: "Comparative Public Health Brief.", ulos: ["ulo_global", "ulo_critical"] },
-                    { discipline: "Environmental Geology", outcome: "Evaluate the social impact of natural resource extraction on indigenous populations globally.", activity: "Case study analysis of mining operations in South America and Africa.", assessment: "Global Resource Impact Case Study.", ulos: ["ulo_global", "ulo_resp"] },
-                    { discipline: "Agricultural Development", outcome: "Analyze traditional farming knowledge systems in semi-arid global regions.", activity: "Reviewing FAO international agricultural case studies.", assessment: "Comparative Agricultural Systems Brief.", ulos: ["ulo_global", "ulo_depth"] }
-                  ],
-                  nonstem: [
-                    { discipline: "Anthropology (Cultural)", outcome: "Deconstruct cultural ethnographies using relativistic analytical frameworks.", activity: "Guided ethnographic text analysis and structured cross-cultural comparisons.", assessment: "Ethnographic Critique Essay.", ulos: ["ulo_global", "ulo_critical"] },
-                    { discipline: "International Business", outcome: "Evaluate international trade etiquette and negotiation styles across Asian and European markets.", activity: "Simulated cross-cultural business negotiation exercises.", assessment: "Cross-Cultural Negotiation Analysis.", ulos: ["ulo_global", "ulo_comm"] },
-                    { discipline: "Comparative Politics", outcome: "Differentiate electoral structures across parliamentary and presidential democracies.", activity: "Analyzing global election data across OECD member nations.", assessment: "Comparative Electoral Systems Brief.", ulos: ["ulo_global", "ulo_critical"] }
-                  ],
-                  cocurricular: [
-                    { discipline: "Multicultural Student Services", outcome: "Identify core principles of cultural humility during campus diversity workshops.", activity: "Attending structured intercultural dialogue sessions and self-reflection debriefs.", assessment: "Cultural Humility Self-Reflection Log.", ulos: ["ulo_global", "ulo_resp"] },
-                    { discipline: "Global Student Ambassadors", outcome: "Facilitate orientation panels welcoming international exchange students.", activity: "Leading campus cultural orientation roundtables for incoming international peers.", assessment: "International Orientation Evaluation Sheet.", ulos: ["ulo_global", "ulo_comm", "ulo_collab"] },
-                    { discipline: "Study Abroad Office", outcome: "Complete pre-departure global safety and cultural immersion orientation modules.", activity: "Participating in cross-cultural adaptability scenario workshops.", assessment: "Pre-Departure Competency Verification.", ulos: ["ulo_global", "ulo_lifelong"] }
-                  ]
-                }
-              },
-              applied: {
-                desc: "Domestic or international immersion, cross-cultural team projects, and community engagement with diverse populations.",
-                exemplars: {
-                  stem: [
-                    { discipline: "Engineers Without Borders", outcome: "Co-design clean water filtration systems tailored to local rural community needs in Central America.", activity: "Remote engineering consultations with local community leaders to design sustainable water filters.", assessment: "Community-Adapted Engineering Design Specification.", ulos: ["ulo_global", "ulo_depth", "ulo_resp", "ulo_collab"] },
-                    { discipline: "Tropical Field Ecology", outcome: "Execute biological biodiversity surveys during a 2-week field immersion in Costa Rica.", activity: "On-site rainforest transect sampling alongside local rainforest preserve biologists.", assessment: "Tropical Biodiversity Field Report.", ulos: ["ulo_global", "ulo_depth", "ulo_critical"] },
-                    { discipline: "Global Agronomy", outcome: "Assess soil degradation mitigation strategies alongside smallholder farmers in international field stations.", activity: "Field testing soil conservation techniques with local agricultural extension workers.", assessment: "Field Soil Quality Mitigation Report.", ulos: ["ulo_global", "ulo_critical"] }
-                  ],
-                  nonstem: [
-                    { discipline: "Bilingual Education Practicum", outcome: "Deliver English as a Second Language (ESL) tutoring for local immigrant adult learners.", activity: "Weekly community literacy coaching sessions at local community centers.", assessment: "ESL Coaching Progress Portfolio & Student Feedback.", ulos: ["ulo_global", "ulo_comm", "ulo_resp"] },
-                    { discipline: "International Journalism", outcome: "Report on international border economic issues through field reporting along the US-Mexico border.", activity: "Conducting bilingual interviews with border business owners, community members, and trade officials.", assessment: "Bilingual Border News Series.", ulos: ["ulo_global", "ulo_comm", "ulo_critical"] },
-                    { discipline: "Global History Field Study", outcome: "Analyze historical preservation challenges in European historic centers during field study.", activity: "On-site archival research and architectural surveys in historic European cities.", assessment: "European Historic Preservation Monograph.", ulos: ["ulo_global", "ulo_depth", "ulo_comm"] }
-                  ],
-                  cocurricular: [
-                    { discipline: "Multicultural Council", outcome: "Coordinate cross-cultural campus forums addressing global human rights issues.", activity: "Planning, marketing, and moderating inter-faith and international student panels.", assessment: "Global Rights Forum Execution Report.", ulos: ["ulo_global", "ulo_comm", "ulo_resp", "ulo_collab"] },
-                    { discipline: "Alternative Spring Break (Global)", outcome: "Execute community development service projects in international partner communities.", activity: "Collaborative building construction and youth tutoring alongside local community hosts.", assessment: "Global Service Impact Portfolio & Journal.", ulos: ["ulo_global", "ulo_resp", "ulo_collab"] },
-                    { discipline: "Language Immersion Living Community", outcome: "Sustain exclusive foreign language conversation in living-learning residential halls.", activity: "Daily immersive conversational meals, cultural events, and peer debates.", assessment: "Conversational Language Proficiency Audit.", ulos: ["ulo_global", "ulo_comm", "ulo_lifelong"] }
-                  ]
-                }
-              },
-              integrated: {
-                desc: "Full semester study abroad, global internship, or leading sustained international equity initiatives.",
-                exemplars: {
-                  stem: [
-                    { discipline: "Global Engineering Semester Abroad", outcome: "Complete a full semester of engineering coursework taught at an international partner university.", activity: "Full-time enrollment in European or Asian engineering university courses and lab groups.", assessment: "International Academic Transcript & Research Portfolio.", ulos: ["ulo_global", "ulo_depth", "ulo_critical", "ulo_lifelong"] },
-                    { discipline: "International Medical Mission Capstone", outcome: "Manage mobile healthcare delivery logistics in underserved rural international regions.", activity: "Setting up field triage clinics alongside international non-governmental organization (NGO) physicians.", assessment: "Global Health Deployment Audit & Clinical Logbook.", ulos: ["ulo_global", "ulo_resp", "ulo_comm", "ulo_collab"] },
-                    { discipline: "Global Climate Modeling Research", outcome: "Co-author global climate change models in international research consortia.", activity: "Year-long remote research collaboration with international supercomputing labs.", assessment: "Co-Authored Global Climate Research Manuscript.", ulos: ["ulo_global", "ulo_depth", "ulo_critical"] }
-                  ],
-                  nonstem: [
-                    { discipline: "International NGO Internship", outcome: "Draft human rights compliance reports for international agencies in Geneva or DC.", activity: "Full-time internship analyzing global treaty compliance data and drafting policy memos.", assessment: "NGO Treaty Compliance Portfolio & Supervisor Review.", ulos: ["ulo_global", "ulo_resp", "ulo_comm", "ulo_critical"] },
-                    { discipline: "Global Business Supply Chain", outcome: "Audit international supplier labor compliance across Asian manufacturing hubs.", activity: "Embedded corporate supply chain internship reviewing factory audit logs and labor standards.", assessment: "Corporate Global Labor Audit Deliverable.", ulos: ["ulo_global", "ulo_resp", "ulo_critical"] },
-                    { discipline: "Diplomacy & Foreign Service Practicum", outcome: "Serve as a junior embassy intern assisting consular officers with international diplomatic affairs.", activity: "Full-time embassy internship processing visa applications, trade briefs, and cultural events.", assessment: "Embassy Internship Performance Evaluation & Trade Portfolio.", ulos: ["ulo_global", "ulo_comm", "ulo_resp", "ulo_depth"] }
-                  ],
-                  cocurricular: [
-                    { discipline: "International Student Federation President", outcome: "Represent 5,000+ international students in university System administration meetings.", activity: "Directing international student advocacy campaigns and advising university leadership.", assessment: "Annual International Student Advocacy Audit.", ulos: ["ulo_global", "ulo_resp", "ulo_comm", "ulo_collab"] },
-                    { discipline: "Peace Corps Prep Program Director", outcome: "Direct campus-wide Peace Corps preparatory training cohorts for graduating seniors.", activity: "Managing candidate recruitment, global competency tracking, and service placements.", assessment: "Peace Corps Cohort Certification Portfolio.", ulos: ["ulo_global", "ulo_resp", "ulo_lifelong"] },
-                    { discipline: "Global Disaster Relief Coordinator", outcome: "Direct international humanitarian supply chain logistics for major international aid networks.", activity: "Coordinating air-freight medical supply routing for international crisis zones.", assessment: "Global Relief Operations Final Report.", ulos: ["ulo_global", "ulo_resp", "ulo_collab"] }
-                  ]
-                }
-              }
-            }
-          }
-        ]
-      },
-      {
-        quadrant: "QUADRANT D: INTEGRATION & REFLECTION",
-        elements: [
-          {
-            id: "reflection",
-            title: "7. Structured Reflection & Metacognition",
-            rationale: "Guided reflection connects experience to theory, turning active doing into permanent cognitive learning and self-awareness.",
-            tiers: {
-              foundational: {
-                desc: "Guided reflective prompts, learning journals, and muddiest-point self-assessments.",
-                exemplars: {
-                  stem: [
-                    { discipline: "Introductory Computer Science", outcome: "Identify personal debugging habit errors through weekly coding reflection logs.", activity: "Submitting weekly 250-word reflective entries detailing personal problem-solving roadblocks in code.", assessment: "Weekly Debugging Reflection Journal.", ulos: ["ulo_critical", "ulo_lifelong"] },
-                    { discipline: "Chemistry I", outcome: "Assess conceptual understanding gaps using end-of-unit 'muddiest point' reflections.", activity: "Weekly post-lecture digital prompts asking students to articulate unmapped concepts.", assessment: "Metacognitive Self-Assessment Summary.", ulos: ["ulo_critical", "ulo_lifelong"] },
-                    { discipline: "Engineering Foundations", outcome: "Reflect on team dynamics following introductory group engineering design challenges.", activity: "Guided team reflection worksheets analyzing personal communication during project builds.", assessment: "Team Dynamics Reflection Sheet.", ulos: ["ulo_collab", "ulo_resp"] }
-                  ],
-                  nonstem: [
-                    { discipline: "Introductory Sociology", outcome: "Relate personal life experiences to sociological concepts using guided reflective prompts.", activity: "Bi-weekly reflective essays connecting personal biography to broader structural concepts.", assessment: "Sociological Imagination Reflection Portfolio.", ulos: ["ulo_critical", "ulo_global", "ulo_lifelong"] },
-                    { discipline: "Creative Writing", outcome: "Analyze personal narrative choices through written artist statements.", activity: "Drafting reflective process notes accompanying short story drafts.", assessment: "Author Reflection Statement.", ulos: ["ulo_comm", "ulo_critical"] },
-                    { discipline: "Introductory Ethics", outcome: "Trace personal ethical value shifts across controversial case study debates.", activity: "Pre- and post-course ethical stance reflection essays.", assessment: "Ethical Growth Reflection Essay.", ulos: ["ulo_resp", "ulo_lifelong"] }
-                  ],
-                  cocurricular: [
-                    { discipline: "First-Year Seminar", outcome: "Articulate personal college transition goals using structured self-reflection journals.", activity: "Weekly guided reflective journal entries on academic transition and campus involvement.", assessment: "First-Year Transition Reflection Log.", ulos: ["ulo_lifelong"] },
-                    { discipline: "Peer Tutor Training", outcome: "Evaluate personal tutoring session effectiveness through post-session debrief logs.", activity: "Logging self-reflective notes on communication clarity after every student tutoring session.", assessment: "Tutoring Self-Evaluation Log.", ulos: ["ulo_comm", "ulo_lifelong"] },
-                    { discipline: "Campus Leadership Workshop", outcome: "Identify personal leadership style strengths using standardized personality assessments.", activity: "Reflective debrief workshops reviewing personal CliftonStrengths results.", assessment: "Leadership Style Reflection Sheet.", ulos: ["ulo_lifelong", "ulo_resp"] }
-                  ]
-                }
-              },
-              applied: {
-                desc: "Critical incident reflections, mid-project metacognitive course corrections, and ePortfolios.",
-                exemplars: {
-                  stem: [
-                    { discipline: "Intermediate Software Engineering", outcome: "Evaluate technical failure recovery decisions during agile sprint retrospectives.", activity: "Conducting formal team retrospectives after every 2-week software sprint to analyze failures.", assessment: "Sprint Retrospective Memo & Action Plan.", ulos: ["ulo_critical", "ulo_collab", "ulo_lifelong"] },
-                    { discipline: "Organic Chemistry II", outcome: "Trace synthesis synthesis strategy evolution in a semester-long digital learning ePortfolio.", activity: "Maintaining a digital ePortfolio documenting synthetic reaction mechanism mistakes and corrections.", assessment: "Organic Chemistry ePortfolio Deliverable.", ulos: ["ulo_depth", "ulo_critical", "ulo_lifelong"] },
-                    { discipline: "Biomedical Engineering Design", outcome: "Reflect on client communication missteps during medical device prototyping.", activity: "Mid-semester critical incident writing assignments analyzing prototype design revisions.", assessment: "Critical Incident Reflection Memo.", ulos: ["ulo_comm", "ulo_critical", "ulo_resp"] }
-                  ],
-                  nonstem: [
-                    { discipline: "Teacher Education Practicum", outcome: "Analyze instructional teaching effectiveness through video self-reflection logs.", activity: "Video recording student-teaching lessons and writing detailed timestamped reflection critiques.", assessment: "Video Teaching Analysis & Reflection Portfolio.", ulos: ["ulo_comm", "ulo_critical", "ulo_lifelong"] },
-                    { discipline: "Business Communication", outcome: "Evaluate personal negotiation communication evolution across multi-stage business simulations.", activity: "Writing reflective synthesis essays reviewing peer feedback received during negotiation drills.", assessment: "Negotiation Competency ePortfolio.", ulos: ["ulo_comm", "ulo_critical", "ulo_lifelong"] },
-                    { discipline: "History Research Methods", outcome: "Document historiographical source selection biases in a research methodology journal.", activity: "Maintaining a weekly research process journal tracking primary source analytical breakthroughs.", assessment: "Research Process Reflective Journal.", ulos: ["ulo_critical", "ulo_depth", "ulo_lifelong"] }
-                  ],
-                  cocurricular: [
-                    { discipline: "Student Organization Presidents", outcome: "Evaluate organizational conflict resolution decisions through structured peer retrospectives.", activity: "Monthly executive board reflective debriefs analyzing leadership challenges.", assessment: "Leadership Debrief Portfolio & Growth Plan.", ulos: ["ulo_resp", "ulo_collab", "ulo_lifelong"] },
-                    { discipline: "Community Service Leaders", outcome: "Examine community power dynamics and personal privilege through critical service-learning reflection.", activity: "Bi-weekly reflection roundtables following volunteer field deployments.", assessment: "Critical Service Reflection Monograph.", ulos: ["ulo_global", "ulo_resp", "ulo_lifelong"] },
-                    { discipline: "Resident Advisor Mentors", outcome: "Analyze crisis management responses following residence hall emergency interventions.", activity: "Debrief meetings with professional hall directors reviewing incident response choices.", assessment: "Crisis Incident Reflection Summary.", ulos: ["ulo_resp", "ulo_critical", "ulo_lifelong"] }
-                  ]
-                }
-              },
-              integrated: {
-                desc: "Comprehensive integrative ePortfolios synthesizing multi-year growth, capstone defense reflections, and professional identity statements.",
-                exemplars: {
-                  stem: [
-                    { discipline: "Engineering Senior Capstone", outcome: "Synthesize 4-year engineering competency growth in a public professional showcase ePortfolio.", activity: "Curating a comprehensive capstone ePortfolio documenting engineering design projects and ethical growth.", assessment: "Integrative Engineering Capstone ePortfolio.", ulos: ["ulo_depth", "ulo_critical", "ulo_comm", "ulo_lifelong", "ulo_resp"] },
-                    { discipline: "Biotechnology Research Honors", outcome: "Defend personal development as a scientific researcher in an honors thesis reflective defense.", activity: "Drafting a 15-page reflective synthesis chapter introducing the honors research thesis.", assessment: "Honors Thesis Reflective Defense Chapter.", ulos: ["ulo_depth", "ulo_critical", "ulo_lifelong"] },
-                    { discipline: "Computer Science Capstone", outcome: "Articulate personal software engineering philosophy and ethical responsibility in a capstone defense.", activity: "Formulating a professional code of ethics and project post-mortem defense paper.", assessment: "Software Ethics & Post-Mortem Defense Monograph.", ulos: ["ulo_resp", "ulo_critical", "ulo_lifelong"] }
-                  ],
-                  nonstem: [
-                    { discipline: "Senior University Honors ePortfolio", outcome: "Synthesize interdisciplinary learning across core, major, and co-curricular experiences in a senior capstone ePortfolio.", activity: "Curating a university-wide honors ePortfolio linking academic coursework to TAMU ULOs.", assessment: "Comprehensive Honors ePortfolio & Oral Defense.", ulos: ["ulo_depth", "ulo_critical", "ulo_comm", "ulo_global", "ulo_resp", "ulo_lifelong"] },
-                    { discipline: "Master of Public Administration Capstone", outcome: "Articulate a professional public service philosophy through a career synthesis portfolio.", activity: "Synthesizing client consulting projects, policy memos, and internship achievements into a professional portfolio.", assessment: "Public Service Philosophy & Career Portfolio.", ulos: ["ulo_resp", "ulo_comm", "ulo_global", "ulo_lifelong"] },
-                    { discipline: "Studio Art Senior Exhibition", outcome: "Formulate a comprehensive artist statement connecting thematic art pieces to personal identity.", activity: "Writing an extensive artist statement accompanying a senior solo art gallery exhibition.", assessment: "Artist Philosophy Monograph & Gallery Catalog.", ulos: ["ulo_comm", "ulo_critical", "ulo_lifelong"] }
-                  ],
-                  cocurricular: [
-                    { discipline: "Maroon & White Leadership Society", outcome: "Defend a comprehensive personal leadership portfolio before a faculty evaluation committee.", activity: "Multi-year leadership portfolio defense demonstrating mastery of core TAMU leadership competencies.", assessment: "Maroon & White Leadership Portfolio Defense.", ulos: ["ulo_resp", "ulo_comm", "ulo_global", "ulo_lifelong", "ulo_collab"] },
-                    { discipline: "Student Body Executive Officer", outcome: "Synthesize executive governance achievements and personal leadership growth in a transition dossier.", activity: "Drafting a comprehensive executive transition dossier for incoming student leaders.", assessment: "Executive Transition Dossier & Leadership Defense.", ulos: ["ulo_resp", "ulo_comm", "ulo_lifelong"] },
-                    { discipline: "Student Health & Wellness Leadership", outcome: "Formulate a lifelong health and personal wellness philosophy backed by multi-year service data.", activity: "Drafting a comprehensive personal wellness philosophy portfolio linking service to holistic health.", assessment: "Wellness Philosophy & Service Synthesis Portfolio.", ulos: ["ulo_lifelong", "ulo_resp"] }
-                  ]
-                }
-              }
-            }
-          },
-          {
-            id: "public_demo",
-            title: "8. Public Demonstration of Competence",
-            rationale: "Publicly presenting work elevates student accountability, simulates professional defense, and creates celebrated learning milestones.",
-            tiers: {
-              foundational: {
-                desc: "In-class poster sessions, team presentations to peers, and internal classroom mini-symposia.",
-                exemplars: {
-                  stem: [
-                    { discipline: "Introductory Engineering (ENGR 102)", outcome: "Present team physical prototype models to classmate audiences during end-of-term poster sessions.", activity: "Designing and presenting a 3-minute team poster elevator pitch to classmate judges.", assessment: "Classroom Poster Session Presentation Rubric.", ulos: ["ulo_comm", "ulo_collab"] },
-                    { discipline: "Biology I Lab", outcome: "Deliver oral presentations summarizing laboratory research findings to lab section peers.", activity: "Presenting PowerPoint slides summarizing lab experiment results to lab peers.", assessment: "Lab Presentation Scoring Rubric.", ulos: ["ulo_comm", "ulo_depth"] },
-                    { discipline: "Geosciences Survey", outcome: "Present rock and mineral identification research posters during section mini-symposia.", activity: "Setting up poster displays in department hallways for peer reviews.", assessment: "Mini-Symposium Poster Scorecard.", ulos: ["ulo_comm", "ulo_depth"] }
-                  ],
-                  nonstem: [
-                    { discipline: "Public Speaking (COMM 205)", outcome: "Deliver persuasive speeches to classroom audiences utilizing visual presentation aids.", activity: "Delivering a 7-minute persuasive speech evaluated live by classmates and instructor.", assessment: "Persuasive Speech Evaluation Rubric.", ulos: ["ulo_comm", "ulo_critical"] },
-                    { discipline: "Introductory Marketing", outcome: "Pitch new product concepts to classmate mock investment panels.", activity: "10-minute team pitch presentations pitching consumer product ideas.", assessment: "Product Pitch Presentation Scorecard.", ulos: ["ulo_comm", "ulo_collab"] },
-                    { discipline: "Introductory Art History", outcome: "Deliver gallery talk presentations analyzing selected campus public artworks.", activity: "Leading 5-minute walking tour presentations in campus public art spaces.", assessment: "Gallery Talk Oral Presentation Rubric.", ulos: ["ulo_comm", "ulo_depth"] }
-                  ],
-                  cocurricular: [
-                    { discipline: "Student Leader Orientation", outcome: "Present annual organization goals to peer leadership cohorts during onboarding retreats.", activity: "5-minute organization goal presentations delivered during leadership workshops.", assessment: "Peer Presentation Rubric.", ulos: ["ulo_comm", "ulo_collab"] },
-                    { discipline: "Peer Health Educators", outcome: "Deliver health outreach presentations to residence hall student groups.", activity: "Co-leading interactive 15-minute wellness presentations in dorm common rooms.", assessment: "Outreach Presentation Evaluation Form.", ulos: ["ulo_comm", "ulo_lifelong"] },
-                    { discipline: "Student Ambassador Training", outcome: "Execute mock campus tour presentations before advisor evaluation panels.", activity: "Delivering campus tour route presentations evaluated by admissions staff.", assessment: "Tour Presentation Certification Signoff.", ulos: ["ulo_comm", "ulo_depth"] }
-                  ]
-                }
-              },
-              applied: {
-                desc: "Departmental symposia, campus-wide research conferences (URWC), and client presentation briefings.",
-                exemplars: {
-                  stem: [
-                    { discipline: "Undergraduate Research (URWC)", outcome: "Present original undergraduate research findings at campus-wide research symposia.", activity: "Delivering formal poster presentations to university faculty and guest judge panels.", assessment: "URWC Research Poster Presentation Evaluation.", ulos: ["ulo_comm", "ulo_depth", "ulo_critical"] },
-                    { discipline: "Civil Engineering Design Studio", outcome: "Brief municipal city engineers on proposed infrastructure design recommendations.", activity: "Formal technical presentation briefings delivered in city hall council chambers.", assessment: "Municipal Client Technical Presentation Evaluation.", ulos: ["ulo_comm", "ulo_critical", "ulo_depth"] },
-                    { discipline: "Computer Science Demo Day", outcome: "Demonstrate working software web applications to visiting industry recruiters.", activity: "Live software demonstration booth presentations during college technology showcases.", assessment: "Industry Demo Day Technical Evaluation.", ulos: ["ulo_comm", "ulo_depth", "ulo_collab"] }
-                  ],
-                  nonstem: [
-                    { discipline: "Mays Business School Competition", outcome: "Pitch strategic business case solutions to corporate executive judging panels.", activity: "Competitive case competition presentations defending financial models before corporate judges.", assessment: "Executive Case Competition Scorecard.", ulos: ["ulo_comm", "ulo_critical", "ulo_depth"] },
-                    { discipline: "Journalism Showcase", outcome: "Publish and present investigative news projects at departmental journalism showcases.", activity: "Presenting multimedia news stories to regional professional journalist panels.", assessment: "Journalism Showcase Media Rubric.", ulos: ["ulo_comm", "ulo_resp"] },
-                    { discipline: "Landscape Architecture Studio", outcome: "Defend urban park redesign models before community resident town halls.", activity: "Presenting architectural scale models and taking public community questions.", assessment: "Community Town Hall Design Defense Scorecard.", ulos: ["ulo_comm", "ulo_global", "ulo_collab"] }
-                  ],
-                  cocurricular: [
-                    { discipline: "Student Affairs Leadership Showcase", outcome: "Present student organization community impact metrics at annual university leadership galas.", activity: "Delivering keynote poster presentations to university donors and student affairs Vice Presidents.", assessment: "Leadership Showcase Presentation Rubric.", ulos: ["ulo_comm", "ulo_resp", "ulo_global"] },
-                    { discipline: "Multicultural Student Conference", outcome: "Facilitate workshop sessions at regional student diversity conferences.", activity: "Co-leading 45-minute interactive workshops for attending regional college delegates.", assessment: "Conference Facilitator Evaluation Scoresheet.", ulos: ["ulo_comm", "ulo_global", "ulo_collab"] },
-                    { discipline: "Campus Sustainability Summit", outcome: "Present campus energy reduction project outcomes at annual regional sustainability summits.", activity: "Delivering breakout session oral presentations to university physical plant directors.", assessment: "Summit Presentation Evaluation Form.", ulos: ["ulo_comm", "ulo_resp", "ulo_lifelong"] }
-                  ]
-                }
-              },
-              integrated: {
-                desc: "National academic conference presentations, published articles, client board defenses, and public performances.",
-                exemplars: {
-                  stem: [
-                    { discipline: "National STEM Conference Defense", outcome: "Present original research papers at national academic conferences (e.g., IEEE, ACS, BMES).", activity: "Delivering 15-minute oral research presentations and taking questions from national research faculty.", assessment: "National Conference Presentation Certification & Abstract Publication.", ulos: ["ulo_comm", "ulo_depth", "ulo_critical", "ulo_lifelong"] },
-                    { discipline: "Engineering Capstone Industry Defense", outcome: "Defend formal capstone engineering prototypes before corporate sponsor executive boards.", activity: "Formal 30-minute technical defense and live prototype demonstration before corporate sponsors.", assessment: "Corporate Executive Board Defense Signoff.", ulos: ["ulo_comm", "ulo_depth", "ulo_critical", "ulo_collab"] },
-                    { discipline: "Biotechnology Patent Briefing", outcome: "Present original biodevice patent applications to university intellectual property officers.", activity: "Formal legal and technical presentation defending patent claims to IP attorneys.", assessment: "Patent Disclosure Defense Evaluation.", ulos: ["ulo_comm", "ulo_depth", "ulo_critical", "ulo_resp"] }
-                  ],
-                  nonstem: [
-                    { discipline: "National Public Policy Forum", outcome: "Present legislative policy research at national undergraduate policy conferences in Washington DC.", activity: "Defending policy briefs before congressional staff and national think tank analysts.", assessment: "National Policy Forum Defense Evaluation.", ulos: ["ulo_comm", "ulo_critical", "ulo_resp", "ulo_global"] },
-                    { discipline: "Senior Fine Arts Solo Exhibition", outcome: "Curate and defend a public solo fine arts exhibition in university galleries.", activity: "Hosting a formal public gallery opening and delivering artist talk lectures to community guests.", assessment: "Public Solo Exhibition Jury Scorecard.", ulos: ["ulo_comm", "ulo_critical", "ulo_lifelong"] },
-                    { discipline: "Executive MBA Consulting Defense", outcome: "Deliver final strategic consulting recommendations to client Board of Directors.", activity: "Formal executive boardroom presentation delivering final business turn-around strategies.", assessment: "Board of Directors Acceptance Signoff & Evaluation.", ulos: ["ulo_comm", "ulo_depth", "ulo_critical", "ulo_resp"] }
-                  ],
-                  cocurricular: [
-                    { discipline: "National SGA Leadership Conference", outcome: "Deliver keynote presentations on student governance at national higher education conferences.", activity: "Delivering keynote addresses to university student body presidents nationwide.", assessment: "National Keynote Speaker Evaluation.", ulos: ["ulo_comm", "ulo_resp", "ulo_global", "ulo_collab"] },
-                    { discipline: "Disaster Preparedness National Briefing", outcome: "Brief state and federal emergency management officials on student relief deployment data.", activity: "Formal briefing presentation delivered at state emergency management headquarters.", assessment: "State Emergency Management Briefing Evaluation.", ulos: ["ulo_comm", "ulo_resp", "ulo_collab"] },
-                    { discipline: "University Board of Regents Defense", outcome: "Defend campus student fee allocation proposals directly before the Board of Regents.", activity: "Formal public testimony before university system regents advocating for student services.", assessment: "System Board Official Minutes Signoff.", ulos: ["ulo_comm", "ulo_resp", "ulo_depth"] }
+                    {
+                      discipline: "Student Body Executive Leadership",
+                      outcome: "Lead an institutional organization for 120+ hours overseeing operations and budget allocation.",
+                      activity: "Year-long executive governance managing budgets, committee structures, and campus initiatives.",
+                      assessment: "Annual Institutional Impact Report & Leadership Assessment Portfolio.",
+                      ulos: ["ulo_resp", "ulo_comm", "ulo_global", "ulo_collab"]
+                    },
+                    {
+                      discipline: "Traditions Council Chair",
+                      outcome: "Direct major university tradition event operations accumulating 130 hours of leadership.",
+                      activity: "Managing volunteer committees, university police liaison meetings, and crowd safety plans.",
+                      assessment: "Operational Execution Audit & Tradition Leadership Portfolio.",
+                      ulos: ["ulo_resp", "ulo_global", "ulo_collab"]
+                    },
+                    {
+                      discipline: "Emergency Corps (Student EMT Directors)",
+                      outcome: "Log 150 hours directing emergency medical response operations on campus.",
+                      activity: "Managing shift rosters, medical supply inventory, and live event emergency coverage.",
+                      assessment: "Emergency Response Operations Audit & Medical Director Signoff.",
+                      ulos: ["ulo_resp", "ulo_lifelong", "ulo_collab"]
+                    }
                   ]
                 }
               }
@@ -1277,9 +1430,10 @@
       }
     ];
 
+    // Diagnostic State Variables
     const diagnosticScores = {};
-    let currentModalExemplars = [];
 
+    // Initial Load Handler
     document.addEventListener('DOMContentLoaded', () => {
       renderMatrix();
       renderDiagnostic();
@@ -1287,6 +1441,7 @@
       updateBuilderExemplars();
     });
 
+    // Tab Switcher
     function switchTab(tabId) {
       document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.nav-tab').forEach(el => el.classList.remove('active'));
@@ -1298,6 +1453,7 @@
       if (activeBtn) activeBtn.classList.add('active');
     }
 
+    // Requirement 1 & 2: Render Matrix Grid with Clean Headers & Gray Cell Shading
     function renderMatrix() {
       const container = document.getElementById('matrixContainer');
       let html = `
@@ -1345,6 +1501,9 @@
       container.innerHTML = html;
     }
 
+    // Requirement 3: Modal Handler displaying 3 examples per track
+    let currentModalExemplars = [];
+
     function openModal(elementId, scope, track) {
       let foundElem = null;
       let quadrantTitle = "";
@@ -1367,6 +1526,7 @@
       document.getElementById('modalTitle').textContent = foundElem.title;
       document.getElementById('modalSubtitle').textContent = `${quadrantTitle} | ${scopeTitle} Level | ${trackLabel}`;
 
+      // Render Exemplar Tabs
       const tabsContainer = document.getElementById('modalExemplarTabs');
       let tabsHtml = "";
       currentModalExemplars.forEach((ex, idx) => {
@@ -1378,11 +1538,11 @@
       });
       tabsContainer.innerHTML = tabsHtml;
 
-      switchModalExemplar(0);
+      switchModalExemplar(0, track);
       document.getElementById('modalOverlay').classList.add('active');
     }
 
-    function switchModalExemplar(idx) {
+    function switchModalExemplar(idx, trackClass) {
       document.querySelectorAll('.ex-tab-btn').forEach((btn, i) => {
         if (i === idx) btn.classList.add('active');
         else btn.classList.remove('active');
@@ -1391,6 +1551,7 @@
       const ex = currentModalExemplars[idx];
       const container = document.getElementById('modalExemplarContent');
 
+      // Build ULO Badges
       let uloBadgesHtml = ex.ulos.map(uloKey => `
         <span class="ulo-badge">${TAMU_ULOS[uloKey]}</span>
       `).join('');
@@ -1428,6 +1589,7 @@
       if (event.target.id === 'modalOverlay') closeModal();
     }
 
+    // Render Diagnostic Tab & Requirement 5 ULO Tracking
     function renderDiagnostic() {
       const container = document.getElementById('diagnosticItems');
       let html = "";
@@ -1490,7 +1652,7 @@
         });
       });
 
-      const maxPossible = count * 3; // 8 elements * 3 = 24 points
+      const maxPossible = count * 3;
       document.getElementById('scoreDisplay').textContent = `${total} / ${maxPossible}`;
 
       const label = document.getElementById('fidelityTierLabel');
@@ -1506,10 +1668,11 @@
         label.textContent = "Proficient High-Impact Course Profile (Substantial Practice)";
         label.style.color = "#2563eb";
       } else {
-        label.textContent = "Exemplary High-Impact Fidelity Profile (Full 4-Quadrant Integration)";
+        label.textContent = "Exemplary High-Impact Fidelity Profile (Full Integration)";
         label.style.color = "#16a34a";
       }
 
+      // Update Diagnostic ULO Badges
       const uloBadgeContainer = document.getElementById('diagnosticUloBadges');
       if (activeUlos.size === 0) {
         uloBadgeContainer.innerHTML = `<span style="font-size: 0.82rem; color: var(--tamu-steel);">Complete diagnostic selections above to view mapped ULOs.</span>`;
@@ -1520,6 +1683,7 @@
       }
     }
 
+    // Requirement 4 & 5: Populate Syllabus Builder Dropdowns & Generate Robust Text
     function populateBuilderDropdowns() {
       const select = document.getElementById('builderElement');
       let optionsHtml = "";
