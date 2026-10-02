@@ -193,10 +193,6 @@
       line-height: 1.5;
     }
 
-    .element-title-cell p strong {
-      color: var(--tamu-slate);
-    }
-
     .matrix-cell {
       background: var(--tamu-card-bg);
       padding: 20px;
@@ -475,7 +471,7 @@
 
     .diag-options {
       display: flex;
-      gap: 12px;
+      gap: 8px;
     }
 
     .diag-opt {
@@ -657,6 +653,7 @@
         quadrant: "QUADRANT A: ENGAGEMENT",
         elements: [
           {
+            id: "interactions",
             title: "Interactions (Faculty/Peer)",
             rationale: "Mentorship density directly correlates with student retention, sense of belonging, and alumni engagement.",
             tiers: {
@@ -741,6 +738,7 @@
             }
           },
           {
+            id: "feedback",
             title: "Iterative Feedback",
             rationale: "Continuous formative assessment catches learning gaps early, significantly reducing drop and fail rates.",
             tiers: {
@@ -794,7 +792,7 @@
                     activity: "Mid-semester design review adjusting event logistics based on real-world constraints.",
                     assessment: "Event Optimization Report featuring a dedicated Stakeholder Feedback Response section."
                   }
-                ]
+                }
               },
               integrated: {
                 desc: "Feedback focuses on the impact, professional ethics, and public reach of the final work.",
@@ -820,7 +818,7 @@
                     activity: "Formal review cycles with university administrators interrogating risk management plans.",
                     assessment: "Final Approved Administrative Governance Charter."
                   }
-                ]
+                }
               }
             }
           }
@@ -830,6 +828,7 @@
         quadrant: "QUADRANT B: CHALLENGE AND RIGOR",
         elements: [
           {
+            id: "time_effort",
             title: "Time & Effort",
             rationale: "Sustained time-on-task ensures deep cognitive engagement and meets institutional accreditation standards.",
             tiers: {
@@ -857,7 +856,7 @@
                     activity: "Weekly project tracking updates logged in digital project management tools.",
                     assessment: "Weekly Task Completion Verification Log."
                   }
-                ]
+                }
               },
               applied: {
                 desc: "Sustained intensity; significant out-of-class time (40–80 hours) dedicated to project development.",
@@ -883,7 +882,7 @@
                     activity: "Managing program logistics, marketing schedules, and live event setup teams.",
                     assessment: "Program Operational Audit and Execution Metric Portfolio."
                   }
-                ]
+                }
               },
               integrated: {
                 desc: "Deep, immersive investment (100+ hours); students manage complex timelines and competing priorities.",
@@ -891,455 +890,25 @@
                   stem: {
                     trackLabel: "STEM Track",
                     discipline: "Engineering Senior Design",
-                    outcome: "Manage full-lifecycle physical engineering fabrication requiring 120+ total team project hours.",
-                    activity: "Daily design fabrication, stress testing, and industry client status updates across 15 weeks.",
-                    assessment: "Senior Design Capstone Defense & Physical Prototype Sponsor Verification."
+                    outcome: "Dedicate 120+ hours toward building and testing an industry-sponsored engineering prototype.",
+                    activity: "Multi-phase engineering workflow involving CAD modeling, physical prototyping, and stress testing.",
+                    assessment: "Comprehensive Engineering Capstone Report & Industry Sponsor Signoff."
                   },
                   nonstem: {
                     trackLabel: "Non-STEM Track",
-                    discipline: "Clinical Practice / Internships",
-                    outcome: "Complete full-time professional immersion managing daily instructional or organizational tasks.",
-                    activity: "12-week full-time immersion (300+ hours) managing real-world client or classroom operations.",
-                    assessment: "Supervisor Performance Evaluation & Internship Capstone Portfolio."
+                    discipline: "Economics / Management Consulting",
+                    outcome: "Sustain a 100+ hour professional engagement analyzing client supply chains or market data.",
+                    activity: "Full-semester consulting project conducting market surveys, data modeling, and client briefings.",
+                    assessment: "Client Strategy Deliverable & Comprehensive Industry Audit."
                   },
                   cocurricular: {
                     trackLabel: "Co-Curricular Track",
-                    discipline: "Executive Student Body Leadership",
-                    outcome: "Direct year-round executive operations managing budgets and enterprise-scale projects.",
-                    activity: "Managing multi-team committee structures, fiscal budgets, and external partner contracts (150+ hours).",
-                    assessment: "Annual Governance Audit & Executive Transition Archive."
+                    discipline: "Student Organization Executive Board",
+                    outcome: "Lead an institutional organization for 120+ hours overseeing operations and budget allocation.",
+                    activity: "Year-long governance managing budgets, committee structures, and large-scale campus initiatives.",
+                    assessment: "Annual Institutional Impact Report & Leadership Assessment Portfolio."
                   }
-                ]
-              }
-            }
-          },
-          {
-            title: "Performance Expectations",
-            rationale: "High, explicitly communicated standards maintain degree prestige and pass state educational quality audits.",
-            tiers: {
-              foundational: {
-                desc: "Students identify and follow modeled professional standards to complete structured tasks.",
-                exemplars: {
-                  stem: {
-                    trackLabel: "STEM Track",
-                    discipline: "Microbiology / Genetics",
-                    outcome: "Adhere to professional biosafety level (BSL-2) laboratory protocols and data logging standards.",
-                    activity: "Laboratory safety drills and standardized culture plating exercises following strict protocol guidelines.",
-                    assessment: "Biosafety Audit Checklist and Peer Safety Compliance Verification."
-                  },
-                  nonstem: {
-                    trackLabel: "Non-STEM Track",
-                    discipline: "History / Finance",
-                    outcome: "Apply professional citation or accounting standards (e.g., Chicago Manual / GAAP) to assignments.",
-                    activity: "Archival research or balance sheet auditing exercises adhering to industry standards.",
-                    assessment: "Evaluation Rubric scored against professional standards."
-                  },
-                  cocurricular: {
-                    trackLabel: "Co-Curricular Track",
-                    discipline: "Business Communication",
-                    outcome: "Produce executive memos adhering to professional corporate formatting and tone standards.",
-                    activity: "Drafting internal communications based on corporate scenario templates.",
-                    assessment: "Executive Memo Rubric scored against industry standards."
-                  }
-                ]
-              },
-              applied: {
-                desc: "Students apply standards to solve semi-structured problems with increasing autonomy.",
-                exemplars: {
-                  stem: {
-                    trackLabel: "STEM Track",
-                    discipline: "Mechanical Engineering",
-                    outcome: "Apply ASME engineering standards to troubleshoot structural flaws in campus equipment.",
-                    activity: "Site inspection and stress testing on campus systems in collaboration with facilities staff.",
-                    assessment: "Engineering Diagnostic Report evaluated against ASME professional codes."
-                  },
-                  nonstem: {
-                    trackLabel: "Non-STEM Track",
-                    discipline: "Psychology / Real Estate",
-                    outcome: "Execute ethical intake interviews adhering to APA counseling or market standards.",
-                    activity: "Simulated client intakes or market audits using standardized diagnostic instruments.",
-                    assessment: "Case Summary & Ethics Compliance Rubric."
-                  },
-                  cocurricular: {
-                    trackLabel: "Co-Curricular Track",
-                    discipline: "Student Organization Finance",
-                    outcome: "Apply financial control standards to audit student organization operational budgets.",
-                    activity: "Financial audit sprint analyzing operational budgets for compliance and risk exposure.",
-                    assessment: "Formal Audit Findings Report presented to executive boards."
-                  }
-                ]
-              },
-              integrated: {
-                desc: "Students negotiate/define the standards and criteria for original, unscripted outcomes.",
-                exemplars: {
-                  stem: {
-                    trackLabel: "STEM Track",
-                    discipline: "Aerospace Engineering",
-                    outcome: "Establish industry-grade quality criteria for original unscripted deliverables for external partners.",
-                    activity: "Negotiating technical specifications and acceptance criteria directly with industry engineers.",
-                    assessment: "Sponsor-Approved Systems Requirement Document & Design Review."
-                  },
-                  nonstem: {
-                    trackLabel: "Non-STEM Track",
-                    discipline: "Public Policy / Consulting",
-                    outcome: "Draft policy frameworks complying with international regulatory or legal standards.",
-                    activity: "Co-designing legislative policy drafts with NGO leadership during live briefs.",
-                    assessment: "Legislative Policy Proposal & External Stakeholder Defense."
-                  },
-                  cocurricular: {
-                    trackLabel: "Co-Curricular Track",
-                    discipline: "Strategic Leadership",
-                    outcome: "Define performance benchmarks and KPI frameworks for external organization partners.",
-                    activity: "Contract negotiation and deliverables scoping with organizational boards.",
-                    assessment: "Master Services Agreement & Client Performance Rating."
-                  }
-                ]
-              }
-            }
-          }
-        ]
-      },
-      {
-        quadrant: "QUADRANT C: INTEGRATION",
-        elements: [
-          {
-            title: "Experiences with Diversity",
-            rationale: "Navigating diverse perspectives develops intercultural competency essential for global workforce readiness.",
-            tiers: {
-              foundational: {
-                desc: "Exposure to diverse perspectives through guided readings, guest speakers, or initial contact.",
-                exemplars: {
-                  stem: {
-                    trackLabel: "STEM Track",
-                    discipline: "Global Health / Agriculture",
-                    outcome: "Identify how agricultural resource access varies across socio-economic and global demographics.",
-                    activity: "Guided seminar analyzing global case studies of resource distribution and agricultural tech access.",
-                    assessment: "Comparative Case Analysis Brief on agricultural equity."
-                  },
-                  nonstem: {
-                    trackLabel: "Non-STEM Track",
-                    discipline: "Anthropology / International Business",
-                    outcome: "Compare cross-cultural communication patterns and negotiation practices across global markets.",
-                    activity: "Simulated cross-cultural negotiation exercise incorporating cultural framework models.",
-                    assessment: "Cross-Cultural Negotiation Analysis Paper."
-                  },
-                  cocurricular: {
-                    trackLabel: "Co-Curricular Track",
-                    discipline: "Inclusion & Student Programs",
-                    outcome: "Describe how personal cultural assumptions influence team leadership dynamics.",
-                    activity: "Participating in guided diversity workshops followed by structured reflection prompts.",
-                    assessment: "Cultural Competency Reflective Essay."
-                  }
-                ]
-              },
-              applied: {
-                desc: "Engagement with diverse perspectives through project-based work; navigating differing viewpoints.",
-                exemplars: {
-                  stem: {
-                    trackLabel: "STEM Track",
-                    discipline: "Urban Planning / Environmental Design",
-                    outcome: "Adapt urban infrastructure designs to accommodate diverse community accessibility requirements.",
-                    activity: "Conducting site accessibility audits with local groups representing members with disabilities.",
-                    assessment: "Universal Design Site Assessment Report."
-                  },
-                  nonstem: {
-                    trackLabel: "Non-STEM Track",
-                    discipline: "Sociology / Human Resources",
-                    outcome: "Design workplace inclusion initiatives addressing diverse employee needs in organizations.",
-                    activity: "Auditing workplace environments and interviewing diverse employee focus groups.",
-                    assessment: "Inclusion & Belonging Audit Report."
-                  },
-                  cocurricular: {
-                    trackLabel: "Co-Curricular Track",
-                    discipline: "Peer Mentorship / Campus Affairs",
-                    outcome: "Facilitate inclusive dialogues addressing differing community perspectives on campus issues.",
-                    activity: "Organizing multi-stakeholder listening sessions bringing together diverse student populations.",
-                    assessment: "Community Perspective Synthesis & Facilitation Critique."
-                  }
-                ]
-              },
-              integrated: {
-                desc: "Transformation through sustained, direct engagement in unfamiliar or complex environments.",
-                exemplars: {
-                  stem: {
-                    trackLabel: "STEM Track",
-                    discipline: "Biomedical Outreach / Water Engineering",
-                    outcome: "Co-design medical technologies directly within under-resourced international communities.",
-                    activity: "Immersive field engineering fellowship in international communities alongside local health providers.",
-                    assessment: "Field Deployment Protocol & Community Partner Impact Assessment."
-                  },
-                  nonstem: {
-                    trackLabel: "Non-STEM Track",
-                    discipline: "International Law / Global Supply Chain",
-                    outcome: "Develop sustainable microfinance or advocacy frameworks supporting marginalized populations.",
-                    activity: "On-site or virtual consulting with international entrepreneurs to restructure loan systems.",
-                    assessment: "Microfinance Impact Portfolio & Partner Renewal Review."
-                  },
-                  cocurricular: {
-                    trackLabel: "Co-Curricular Track",
-                    discipline: "Global Leadership Initiatives",
-                    outcome: "Advocate for marginalized student populations within complex university governance ecosystems.",
-                    activity: "Semester-long immersion working directly in student rights advocacy or community outreach.",
-                    assessment: "Advocacy Casebook & Supervisor Performance Rating."
-                  }
-                ]
-              }
-            }
-          },
-          {
-            title: "Structured Reflection",
-            rationale: "Metacognition converts active experience into portable, permanent professional competencies.",
-            tiers: {
-              foundational: {
-                desc: "Descriptive: How does this experience match what I am learning in the classroom?",
-                exemplars: {
-                  stem: {
-                    trackLabel: "STEM Track",
-                    discipline: "Introductory Biology",
-                    outcome: "Connect lab-observed enzyme reaction rates to theoretical kinetics equations taught in lecture.",
-                    activity: "Weekly post-lab 3-question exit ticket prompting connection between lab data and lecture theory.",
-                    assessment: "Weekly Reflection Exit Ticket Log."
-                  },
-                  nonstem: {
-                    trackLabel: "Non-STEM Track",
-                    discipline: "Psychology / Marketing",
-                    outcome: "Identify alignment between course theories and personal observation or purchasing habits.",
-                    activity: "Weekly self-audit blog analyzing personal behaviors against textbook models.",
-                    assessment: "Descriptive Reflection Journal Rubric."
-                  },
-                  cocurricular: {
-                    trackLabel: "Co-Curricular Track",
-                    discipline: "Student Leadership Training",
-                    outcome: "Describe how personal leadership style aligns with established management frameworks.",
-                    activity: "Post-event journal entries analyzing personal reactions during team exercises.",
-                    assessment: "Leadership Reflection Journal."
-                  }
-                ]
-              },
-              applied: {
-                desc: "Integrative: How am I adapting my skills to meet the specific needs of this context?",
-                exemplars: {
-                  stem: {
-                    trackLabel: "STEM Track",
-                    discipline: "Civil Engineering / Field Geology",
-                    outcome: "Analyze discrepancies between theoretical computer models and field-collected samples.",
-                    activity: "Mid-project reflection essay examining why real-world field conditions diverged from simulations.",
-                    assessment: "Integrative Process Audit Memo."
-                  },
-                  nonstem: {
-                    trackLabel: "Non-STEM Track",
-                    discipline: "Community Sociology / Management",
-                    outcome: "Critique personal leadership adaptations made when managing unexpected team conflict.",
-                    activity: "STAR-method reflection write-up following major project milestones.",
-                    assessment: "STAR Leadership Retrospective Analysis."
-                  },
-                  cocurricular: {
-                    trackLabel: "Co-Curricular Track",
-                    discipline: "Organization Management",
-                    outcome: "Evaluate how project management plans were modified to accommodate volunteer schedules.",
-                    activity: "Guided reflection roundtables discussing adaptations made during community outreach.",
-                    assessment: "Operational Adaptation Reflection Essay."
-                  }
-                ]
-              },
-              integrated: {
-                desc: "Metacognitive: How has this partnership redefined my professional identity and values?",
-                exemplars: {
-                  stem: {
-                    trackLabel: "STEM Track",
-                    discipline: "Bioethics / Computer Science Capstone",
-                    outcome: "Articulate personal professional identity and ethical responsibilities as a technical practitioner.",
-                    activity: "Capstone e-Portfolio curation compiling project artifacts alongside a ethics philosophy essay.",
-                    assessment: "Professional Capstone e-Portfolio Defense."
-                  },
-                  nonstem: {
-                    trackLabel: "Non-STEM Track",
-                    discipline: "Education / Executive Leadership",
-                    outcome: "Translate complex leadership experiences into marketable, high-impact career narratives.",
-                    activity: "Mock executive interview and digital career portfolio presentation for recruiters.",
-                    assessment: "Executive Career Portfolio & Oral Defense."
-                  },
-                  cocurricular: {
-                    trackLabel: "Co-Curricular Track",
-                    discipline: "Student Affairs Leadership",
-                    outcome: "Synthesize how long-term organization leadership altered personal career trajectory and civic values.",
-                    activity: "Senior exit interview presenting a multi-year reflection on civic identity.",
-                    assessment: "Senior Civic Identity Defense."
-                  }
-                ]
-              }
-            }
-          }
-        ]
-      },
-      {
-        quadrant: "QUADRANT D: IMPACT",
-        elements: [
-          {
-            title: "Real-World Application",
-            rationale: "Solving authentic problems validates academic theory and builds institutional community value.",
-            tiers: {
-              foundational: {
-                desc: "Hypothetical or simulated real-world scenarios; low-stakes external connection.",
-                exemplars: {
-                  stem: {
-                    trackLabel: "STEM Track",
-                    discipline: "Introductory Engineering / CS",
-                    outcome: "Solve a simulated structural stress scenario using pre-programmed software tools.",
-                    activity: "In-class simulation lab testing bridge truss stability against modeled load forces.",
-                    assessment: "Simulation Accuracy Report."
-                  },
-                  nonstem: {
-                    trackLabel: "Non-STEM Track",
-                    discipline: "Pre-Law / Corporate Finance",
-                    outcome: "Evaluate corporate financial risk using historical stock market case studies.",
-                    activity: "Simulated stock portfolio management exercise tracking mock investments across 6 weeks.",
-                    assessment: "Portfolio Performance Analysis."
-                  },
-                  cocurricular: {
-                    trackLabel: "Co-Curricular Track",
-                    discipline: "Event Planning",
-                    outcome: "Draft a mock emergency response plan for a simulated large-scale campus gathering.",
-                    activity: "Tabletop scenario exercise reacting to simulated event disruptions.",
-                    assessment: "Event Contingency Plan Portfolio."
-                  }
-                ]
-              },
-              applied: {
-                desc: "Active projects with a live stakeholder; solving a defined problem with real consequences.",
-                exemplars: {
-                  stem: {
-                    trackLabel: "STEM Track",
-                    discipline: "Environmental Science",
-                    outcome: "Develop an actionable campus recycling plan addressing specific waste accumulation data.",
-                    activity: "Collaborating with TAMU Office of Sustainability to audit and redesign campus waste station placement.",
-                    assessment: "Waste Audit Proposal & Campus Implementation Plan."
-                  },
-                  nonstem: {
-                    trackLabel: "Non-STEM Track",
-                    discipline: "Journalism / Small Business Consulting",
-                    outcome: "Conduct local business market feasibility studies for regional merchants.",
-                    activity: "On-site business operations review and customer traffic analysis for local clients.",
-                    assessment: "Small Business Improvement Recommendations Brief."
-                  },
-                  cocurricular: {
-                    trackLabel: "Co-Curricular Track",
-                    discipline: "Campus Safety / Student Life",
-                    outcome: "Execute live campus pedestrian safety surveys in coordination with university police.",
-                    activity: "On-campus traffic observational data collection during peak class change hours.",
-                    assessment: "Campus Pedestrian Safety Recommendation Brief."
-                  }
-                ]
-              },
-              integrated: {
-                desc: "Unscripted partnership; students navigate the ambiguity of a live professional/civic ecosystem.",
-                exemplars: {
-                  stem: {
-                    trackLabel: "STEM Track",
-                    discipline: "Cybersecurity / Health Systems",
-                    outcome: "Deploy a live, production-grade cybersecurity tracking tool for regional health systems.",
-                    activity: "Unscripted software architecture sprints responding to live vulnerabilities in partner networks.",
-                    assessment: "Live System Deployment Audit & Sponsor CTO Evaluation."
-                  },
-                  nonstem: {
-                    trackLabel: "Non-STEM Track",
-                    discipline: "Urban Planning / Executive Management",
-                    outcome: "Author regional transit policy amendments or manage $50k+ corporate project budgets.",
-                    activity: "Direct engagement with transit boards or corporate C-suite executives on live expansion.",
-                    assessment: "Adopted Policy Amendment or Client Final Acceptance Signoff."
-                  },
-                  cocurricular: {
-                    trackLabel: "Co-Curricular Track",
-                    discipline: "Community Non-Profit Leadership",
-                    outcome: "Direct regional food distribution logistics providing relief to local community partners.",
-                    activity: "Managing supply operations and volunteer shifts across regional non-profit hubs.",
-                    assessment: "Operational Impact Audit Signoff."
-                  }
-                ]
-              }
-            }
-          },
-          {
-            title: "Public Demonstration",
-            rationale: "Public defense of work holds students accountable to professional standards and makes learning visible.",
-            tiers: {
-              foundational: {
-                desc: "Presentation to peers/faculty to demonstrate baseline competence and communication.",
-                exemplars: {
-                  stem: {
-                    trackLabel: "STEM Track",
-                    discipline: "Chemistry / Biology",
-                    outcome: "Present experimental methodology and data trends to classmates using scientific slides.",
-                    activity: "End-of-unit 5-minute poster slideshow presented during regular class hours.",
-                    assessment: "Internal Scientific Presentation Rubric."
-                  },
-                  nonstem: {
-                    trackLabel: "Non-STEM Track",
-                    discipline: "Communication / Marketing",
-                    outcome: "Deliver professional pitch presentations introducing a new product concept to peers.",
-                    activity: "Classroom pitch presentation using slide decks and product mockups.",
-                    assessment: "Product Pitch Presentation Scorecard."
-                  },
-                  cocurricular: {
-                    trackLabel: "Co-Curricular Track",
-                    discipline: "Student Leadership",
-                    outcome: "Deliver an end-of-semester organization report to chapter members.",
-                    activity: "Internal meeting presentation reviewing committee goals and fiscal spending.",
-                    assessment: "Internal Report Scorecard."
-                  }
-                ]
-              },
-              applied: {
-                desc: "Presentation to a community partner or specific stakeholder for feedback and critique.",
-                exemplars: {
-                  stem: {
-                    trackLabel: "STEM Track",
-                    discipline: "Architecture / Agricultural Engineering",
-                    outcome: "Present site design proposals directly to campus facility managers and project stakeholders.",
-                    activity: "Campus design showcase presenting physical models and poster boards to TAMU administrators.",
-                    assessment: "Stakeholder Presentation Scorecard."
-                  },
-                  nonstem: {
-                    trackLabel: "Non-STEM Track",
-                    discipline: "Business Analytics / Public Health",
-                    outcome: "Present data visualization dashboards to non-profit or clinical board members.",
-                    activity: "Formal boardroom presentation explaining data insights and operational recommendations.",
-                    assessment: "Board Evaluation of Executive Presentation."
-                  },
-                  cocurricular: {
-                    trackLabel: "Co-Curricular Track",
-                    discipline: "Campus Programming",
-                    outcome: "Present annual event impact metrics to university student affairs directors.",
-                    activity: "Formal program defense advocating for annual student organization budget allocations.",
-                    assessment: "Student Affairs Funding Committee Evaluation."
-                  }
-                ]
-              },
-              integrated: {
-                desc: "Public defense/dissemination to an external body with intent to influence practice or policy.",
-                exemplars: {
-                  stem: {
-                    trackLabel: "STEM Track",
-                    discipline: "Physics / Biomedical Engineering",
-                    outcome: "Defend original research findings at national academic conferences.",
-                    activity: "Presenting peer-reviewed oral or poster presentations to international scientific bodies.",
-                    assessment: "Conference Presentation Certificate & Peer Review Comments."
-                  },
-                  nonstem: {
-                    trackLabel: "Non-STEM Track",
-                    discipline: "Political Science / Venture Capital",
-                    outcome: "Deliver testimony at public legislative hearings or pitch before venture funding panels.",
-                    activity: "Formal public testimony before legislative committees or regional pitch competitions.",
-                    assessment: "Legislative Hearing Transcript or Investor Evaluation."
-                  },
-                  cocurricular: {
-                    trackLabel: "Co-Curricular Track",
-                    discipline: "National Student Governance",
-                    outcome: "Present organizational policy frameworks at national higher education conferences.",
-                    activity: "Delivering panel workshops on student leadership models at national association conventions.",
-                    assessment: "National Conference Program Citation."
-                  }
-                ]
+                }
               }
             }
           }
@@ -1347,44 +916,66 @@
       }
     ];
 
-    let userSelections = {};
+    // State for diagnostic scores
+    const diagnosticScores = {};
 
+    // Initialize application on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderMatrix();
+      renderDiagnostic();
+      populateBuilderDropdown();
+      generateSyllabusText();
+    });
+
+    // Tab Switcher
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.nav-tab').forEach(el => el.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      const activeBtn = Array.from(document.querySelectorAll('.nav-tab')).find(btn => 
+        btn.getAttribute('onclick').includes(tabId)
+      );
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    // Render Matrix Grid
     function renderMatrix() {
-      const container = document.getElementById("matrixContainer");
-      if (!container) return;
-
+      const container = document.getElementById('matrixContainer');
       let html = `
         <div class="grid-header">AAC&U Quality Element</div>
-        <div class="grid-header">FOUNDATIONAL</div>
-        <div class="grid-header">APPLIED</div>
-        <div class="grid-header">INTEGRATED</div>
+        <div class="grid-header">Foundational Scope<br><span style="font-size:0.75rem;font-weight:400;text-transform:none;">(Classroom Focus)</span></div>
+        <div class="grid-header">Applied Scope<br><span style="font-size:0.75rem;font-weight:400;text-transform:none;">(Campus & Community Focus)</span></div>
+        <div class="grid-header">Integrated Scope<br><span style="font-size:0.75rem;font-weight:400;text-transform:none;">(External & Professional Focus)</span></div>
       `;
 
-      matrixData.forEach((q, qIndex) => {
+      matrixData.forEach(q => {
         html += `<div class="quadrant-row-header">${q.quadrant}</div>`;
-
-        q.elements.forEach((elem, eIndex) => {
+        q.elements.forEach(elem => {
           html += `
             <div class="element-title-cell">
               <h3>${elem.title}</h3>
-              <p><strong>Why This Matters:</strong> ${elem.rationale}</p>
+              <p><strong>Rationale:</strong> ${elem.rationale}</p>
             </div>
           `;
 
-          ["foundational", "applied", "integrated"].forEach(tierKey => {
-            const tierData = elem.tiers[tierKey];
+          ['foundational', 'applied', 'integrated'].forEach(scope => {
+            const tierData = elem.tiers[scope];
             html += `
               <div class="matrix-cell">
                 <div class="cell-desc">${tierData.desc}</div>
                 <div class="track-triggers">
-                  <button class="track-btn stem-btn" onclick="openTrackModal(${qIndex}, ${eIndex}, '${tierKey}', 'stem')">
-                    STEM Track <span class="btn-arrow">></span>
+                  <button class="track-btn stem-btn" onclick="openModal('${elem.id}', '${scope}', 'stem')">
+                    <span>STEM Exemplar</span>
+                    <span class="btn-arrow">→</span>
                   </button>
-                  <button class="track-btn nonstem-btn" onclick="openTrackModal(${qIndex}, ${eIndex}, '${tierKey}', 'nonstem')">
-                    Non-STEM Track <span class="btn-arrow">></span>
+                  <button class="track-btn nonstem-btn" onclick="openModal('${elem.id}', '${scope}', 'nonstem')">
+                    <span>Non-STEM Exemplar</span>
+                    <span class="btn-arrow">→</span>
                   </button>
-                  <button class="track-btn cocurricular-btn" onclick="openTrackModal(${qIndex}, ${eIndex}, '${tierKey}', 'cocurricular')">
-                    Co-Curricular Track <span class="btn-arrow">></span>
+                  <button class="track-btn cocurricular-btn" onclick="openModal('${elem.id}', '${scope}', 'cocurricular')">
+                    <span>Co-Curricular Exemplar</span>
+                    <span class="btn-arrow">→</span>
                   </button>
                 </div>
               </div>
@@ -1396,193 +987,199 @@
       container.innerHTML = html;
     }
 
-    function openTrackModal(qIndex, eIndex, tierKey, trackKey) {
-      const elem = matrixData[qIndex].elements[eIndex];
-      const tier = elem.tiers[tierKey];
-      const ex = tier.exemplars[trackKey];
+    // Modal Handling
+    function openModal(elementId, scope, track) {
+      let foundElem = null;
+      let quadrantTitle = "";
 
-      document.getElementById("modalTitle").innerText = `${elem.title}`;
-      document.getElementById("modalSubtitle").innerText = `${matrixData[qIndex].quadrant} | ${tierKey.toUpperCase()} LEVEL`;
+      for (const q of matrixData) {
+        const match = q.elements.find(e => e.id === elementId);
+        if (match) {
+          foundElem = match;
+          quadrantTitle = q.quadrant;
+          break;
+        }
+      }
 
-      const modalBody = document.getElementById("modalBody");
-      
+      if (!foundElem) return;
+
+      const scopeTitle = scope.charAt(0).toUpperCase() + scope.slice(1);
+      const exemplar = foundElem.tiers[scope].exemplars[track];
+
+      document.getElementById('modalTitle').textContent = foundElem.title;
+      document.getElementById('modalSubtitle').textContent = `${quadrantTitle} | ${scopeTitle} Scope`;
+
+      const modalBody = document.getElementById('modalBody');
       modalBody.innerHTML = `
         <div class="package-card">
           <div class="package-header">
-            <span class="track-tag ${trackKey}">${ex.trackLabel}</span>
-            <span class="discipline-label">${ex.discipline}</span>
+            <span class="track-tag ${track}">${exemplar.trackLabel}</span>
+            <span class="discipline-label">${exemplar.discipline}</span>
           </div>
           <div class="data-group">
-            <div class="data-title">Learning Outcome</div>
-            <div class="data-body">${ex.outcome}</div>
+            <span class="data-title">Target Student Learning Outcome</span>
+            <p class="data-body">${exemplar.outcome}</p>
           </div>
           <div class="data-group">
-            <div class="data-title">Learning Activity</div>
-            <div class="data-body">${ex.activity}</div>
+            <span class="data-title">High-Impact Learning Activity</span>
+            <p class="data-body">${exemplar.activity}</p>
           </div>
           <div class="data-group">
-            <div class="data-title">Assessment & Artifact</div>
-            <div class="data-body">${ex.assessment}</div>
+            <span class="data-title">Assessment & Evidence Deliverable</span>
+            <p class="data-body">${exemplar.assessment}</p>
           </div>
-        </div>
-        <div class="action-row">
-          <button class="btn-secondary" onclick="closeModal()">Close Package</button>
         </div>
       `;
 
-      document.getElementById("modalOverlay").classList.add("active");
+      document.getElementById('modalOverlay').classList.add('active');
     }
 
     function closeModal() {
-      document.getElementById("modalOverlay").classList.remove("active");
+      document.getElementById('modalOverlay').classList.remove('active');
     }
 
     function handleOverlayClick(event) {
-      if (event.target.id === "modalOverlay") {
+      if (event.target.id === 'modalOverlay') {
         closeModal();
       }
     }
 
-    function switchTab(tabId) {
-      document.querySelectorAll(".nav-tab").forEach(tab => tab.classList.remove("active"));
-      document.querySelectorAll(".tab-content").forEach(content => content.classList.remove("active"));
-      
-      event.target.classList.add("active");
-      document.getElementById(tabId).classList.add("active");
-    }
-
-    function initDiagnostic() {
-      const container = document.getElementById("diagnosticItems");
-      if (!container) return;
-
+    // Render Diagnostic Tab
+    function renderDiagnostic() {
+      const container = document.getElementById('diagnosticItems');
       let html = "";
-      let itemIndex = 0;
 
-      matrixData.forEach((q) => {
-        q.elements.forEach((elem) => {
-          const key = `elem_${itemIndex}`;
+      matrixData.forEach(q => {
+        q.elements.forEach(elem => {
+          diagnosticScores[elem.id] = 0;
           html += `
             <div class="diag-item">
               <div class="diag-label">
                 <h4>${elem.title}</h4>
-                <p>${q.quadrant}</p>
+                <p>${elem.rationale}</p>
               </div>
-              <div class="diag-options">
-                <div class="diag-opt" id="${key}_0" onclick="setScore('${key}', 0)">None (0)</div>
-                <div class="diag-opt" id="${key}_1" onclick="setScore('${key}', 1)">Foundational (1)</div>
-                <div class="diag-opt" id="${key}_2" onclick="setScore('${key}', 2)">Applied (2)</div>
-                <div class="diag-opt" id="${key}_3" onclick="setScore('${key}', 3)">Integrated (3)</div>
+              <div class="diag-options" id="opts-${elem.id}">
+                <div class="diag-opt selected" onclick="setDiagnosticScore('${elem.id}', 0)">None (0)</div>
+                <div class="diag-opt" onclick="setDiagnosticScore('${elem.id}', 1)">Foundational (1)</div>
+                <div class="diag-opt" onclick="setDiagnosticScore('${elem.id}', 2)">Applied (2)</div>
+                <div class="diag-opt" onclick="setDiagnosticScore('${elem.id}', 3)">Integrated (3)</div>
               </div>
             </div>
           `;
-          itemIndex++;
         });
       });
 
       container.innerHTML = html;
+      updateDiagnosticSummary();
     }
 
-    function setScore(key, value) {
-      userSelections[key] = value;
-      
-      [0, 1, 2, 3].forEach(v => {
-        const el = document.getElementById(`${key}_${v}`);
-        if (el) el.classList.remove("selected");
+    function setDiagnosticScore(elemId, score) {
+      diagnosticScores[elemId] = score;
+      const parent = document.getElementById(`opts-${elemId}`);
+      const opts = parent.querySelectorAll('.diag-opt');
+      opts.forEach((opt, idx) => {
+        if (idx === score) {
+          opt.classList.add('selected');
+        } else {
+          opt.classList.remove('selected');
+        }
       });
-
-      const selectedEl = document.getElementById(`${key}_${value}`);
-      if (selectedEl) selectedEl.classList.add("selected");
-
-      calculateScore();
+      updateDiagnosticSummary();
     }
 
-    function calculateScore() {
+    function updateDiagnosticSummary() {
       let total = 0;
-      Object.values(userSelections).forEach(val => total += val);
+      let count = 0;
+      for (const key in diagnosticScores) {
+        total += diagnosticScores[key];
+        count++;
+      }
+      const maxPossible = count * 3;
+      document.getElementById('scoreDisplay').textContent = `${total} / ${maxPossible}`;
 
-      document.getElementById("scoreDisplay").innerText = `${total} / 24`;
+      const label = document.getElementById('fidelityTierLabel');
+      const ratio = total / maxPossible;
 
-      const label = document.getElementById("fidelityTierLabel");
-      if (total >= 20) {
-        label.innerText = "High-Fidelity Integrated HIP (Ready for Institutional Audit)";
-      } else if (total >= 14) {
-        label.innerText = "Applied HIP (Meets Core TAMU High-Impact Criteria)";
-      } else if (total >= 8) {
-        label.innerText = "Foundational HIP (Developing High-Impact Practice)";
+      if (total === 0) {
+        label.textContent = "Select options above to compute status.";
+        label.style.color = "var(--tamu-steel)";
+      } else if (ratio < 0.4) {
+        label.textContent = "Developing High-Impact Alignment (Initial Implementation)";
+        label.style.color = "#d97706";
+      } else if (ratio < 0.75) {
+        label.textContent = "Proficient High-Impact Course Profile (Substantial Practice)";
+        label.style.color = "#2563eb";
       } else {
-        label.innerText = "Emerging / Pre-HIP Designation Status";
+        label.textContent = "Exemplary High-Impact Fidelity Profile (Full Integration)";
+        label.style.color = "#16a34a";
       }
     }
 
-    function initBuilderOptions() {
-      const select = document.getElementById("builderElement");
-      if (!select) return;
+    // Populate Builder Dropdown
+    function populateBuilderDropdown() {
+      const select = document.getElementById('builderElement');
+      let optionsHtml = "";
 
-      let html = "";
       matrixData.forEach(q => {
         q.elements.forEach(elem => {
-          html += `<option value="${elem.title}">${elem.title} (${q.quadrant})</option>`;
+          optionsHtml += `<option value="${elem.id}">${elem.title}</option>`;
         });
       });
-      select.innerHTML = html;
-      generateSyllabusText();
+
+      select.innerHTML = optionsHtml;
     }
 
+    // Generate Syllabus Language
     function generateSyllabusText() {
-      const elemTitle = document.getElementById("builderElement").value;
-      const scope = document.getElementById("builderScope").value;
-      const track = document.getElementById("builderTrack").value;
+      const elemId = document.getElementById('builderElement').value;
+      const scope = document.getElementById('builderScope').value;
+      const track = document.getElementById('builderTrack').value;
 
-      let matchedElem = null;
-      let matchedQuadrant = "";
+      let foundElem = null;
+      for (const q of matrixData) {
+        const match = q.elements.find(e => e.id === elemId);
+        if (match) {
+          foundElem = match;
+          break;
+        }
+      }
 
-      matrixData.forEach(q => {
-        q.elements.forEach(e => {
-          if (e.title === elemTitle) {
-            matchedElem = e;
-            matchedQuadrant = q.quadrant;
-          }
-        });
-      });
+      if (!foundElem) return;
 
-      if (!matchedElem) return;
-
-      const ex = matchedElem.tiers[scope].exemplars[track];
+      const exemplar = foundElem.tiers[scope].exemplars[track];
+      const scopeFormatted = scope.charAt(0).toUpperCase() + scope.slice(1);
 
       const syllabusText = 
-`COURSE DESIGN ALIGNMENT STATEMENT (${matchedQuadrant})
-Quality Element: ${matchedElem.title}
-Target Scope: ${scope.toUpperCase()} | Track: ${ex.trackLabel} (${ex.discipline})
+`COURSE DESIGN ALIGNMENT STATEMENT (${foundElem.title.toUpperCase()})
+Scope Focus: ${scopeFormatted} Level | Track: ${exemplar.trackLabel} (${exemplar.discipline})
 
-1. COURSE LEARNING OBJECTIVE:
-"Students will be able to ${ex.outcome.toLowerCase()}"
+1. COURSE PURPOSE & DESCRIPTION:
+This course incorporates high-impact learning principles focused on ${foundElem.title.toLowerCase()}. Students will engage in structured learning activities that emphasize ${foundElem.tiers[scope].desc.toLowerCase()}
 
-2. LEARNING ACTIVITY & PEDAGOGICAL WORKFLOW:
-${ex.activity}
+2. STUDENT LEARNING OUTCOME (SLO):
+By the end of this course, students will be able to:
+"${exemplar.outcome}"
 
-3. ASSESSMENT & ARTIFACT RUBRIC CRITERIA:
-Primary Deliverable: ${ex.assessment}
-Evaluation Focus: Demonstration of disciplinary precision, adherence to safety/ethical protocols, and quality of revision/public execution.`;
+3. LEARNING ACTIVITY & PEDAGOGICAL METHOD:
+Students will achieve this outcome through the following high-impact activity:
+"${exemplar.activity}"
 
-      document.getElementById("syllabusOutput").innerText = syllabusText;
+4. EVALUATION & EVIDENCE DELIVERABLE:
+Student performance and growth will be assessed using:
+"${exemplar.assessment}"`;
+
+      document.getElementById('syllabusOutput').textContent = syllabusText;
     }
 
+    // Copy Syllabus Text to Clipboard
     function copySyllabusText() {
-      const text = document.getElementById("syllabusOutput").innerText;
+      const text = document.getElementById('syllabusOutput').textContent;
       navigator.clipboard.writeText(text).then(() => {
-        alert("Syllabus text copied to clipboard!");
+        alert('Syllabus language copied to clipboard!');
+      }).catch(err => {
+        alert('Failed to copy text: ' + err);
       });
     }
-
-    document.addEventListener("keydown", function(e) {
-      if (e.key === "Escape") closeModal();
-    });
-
-    document.addEventListener("DOMContentLoaded", function() {
-      renderMatrix();
-      initDiagnostic();
-      initBuilderOptions();
-    });
   </script>
 </body>
 </html>
